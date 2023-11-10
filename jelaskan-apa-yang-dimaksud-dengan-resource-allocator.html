@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jelaskan Apa Yang Dimaksud Dengan Resource Allocator - BELAJAR</title>
+    <meta name="description" content="Jelaskan Apa Yang Dimaksud Dengan Resource Allocator, , , , , , , 0, , , , , , 0, jelaskan-apa-yang-dimaksud-dengan-resource-allocator, BELAJAR" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jelaskan Apa Yang Dimaksud Dengan Resource Allocator - BELAJAR" />
+    <meta property="og:description" content="Jelaskan Apa Yang Dimaksud Dengan Resource Allocator, , , , , , , 0, , , , , , 0, jelaskan-apa-yang-dimaksud-dengan-resource-allocator, BELAJAR" />
+    <meta property="og:site_name" content="BELAJAR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jelaskan Apa Yang Dimaksud Dengan Resource Allocator - BELAJAR" />
+    <meta name="twitter:description" content="Jelaskan Apa Yang Dimaksud Dengan Resource Allocator, , , , , , , 0, , , , , , 0, jelaskan-apa-yang-dimaksud-dengan-resource-allocator, BELAJAR" />
+    <link rel='stylesheet' id='generate-style-css' href='https://idwikipedia.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://idwikipedia.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://idwikipedia.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://idwikipedia.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://idwikipedia.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://idwikipedia.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://idwikipedia.github.io">Home</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2"><a
+                            href="https://idwikipedia.github.io/page/dmca.html">DMCA</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3"><a
+                            href="https://idwikipedia.github.io/page/privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://idwikipedia.github.io" rel="home"> BELAJAR</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Jelaskan Apa Yang Dimaksud Dengan Resource Allocator</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">fkydp</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Jelaskan+Apa+Yang+Dimaksud+Dengan+Resource+Allocator" alt="Jelaskan Apa Yang Dimaksud Dengan Resource Allocator">
+                    </div>
+                    <p></p>
+                    <p>contoh resource allocator adalah​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-resource-allocator-adalah%e2%80%8b">1.
+                                            contoh resource allocator adalah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#salah-satu-peran-sistem-oprasi-adalah-sebagai-resource-allocatorapakah-maksud-dari-hal-tersebut">2.
+                                            salah satu peran sistem oprasi adalah sebagai resource allocator,apakah maksud dari hal tersebut?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#perangkat-lunak-yang-berfungsi-sebagai-resource-allocator-adalah">3.
+                                            perangkat lunak yang berfungsi sebagai resource allocator adalah</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#yang-bukan-bagian-penting-dari-sistem-operasi-adalah-%c2%a0a-mekanisme-bootb-driverc-resource-allocatord-hardware%e2%80%8b">4.
+                                            yang bukan bagian penting dari sistem operasi adalah... a. Mekanisme Bootb. Driverc. Resource Allocatord. Hardware​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-di-maksud-dengan-resource-sharing-dalam-memanfaatkan-sebuah-jaringan-komputer">5.
+                                            apa yang di maksud dengan resource sharing dalam memanfaatkan sebuah jaringan komputer</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-mengapa-dalam-perkembangan-software-pada-saat-ini-membutuhkan-semakin-meningkatnya-kebutuhan-resource-hardware">6.
+                                            Jelaskan    mengapa    dalam    perkembangan    software    pada    saat    ini membutuhkan semakin meningkatnya kebutuhan resource hardware?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-perbedaan-sumber-daya-alam-natural-resource-dengan-barang-sumber-daya-resource-komuditi">7.
+                                            apa perbedaan sumber daya alam natural resource dengan barang sumber daya resource komuditi</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-mengapa-dalam-perkembangan-software-pada-saat-ini-membutuhkan-semakin-meningkatnya-kebutuhan-resource-hardware">8.
+                                            jelaskan mengapa dalam perkembangan software pada saat ini membutuhkan semakin meningkatnya kebutuhan resource hardware</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-jelaskan-yang-dimaksud-dengan-enterprise-resource-planning-erp">9.
+                                            1. jelaskan yang dimaksud dengan enterprise resource planning (erp)</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-dan-jelaskan-hasil-sharing-resource-dalam-jaringan-yang-di-anggap-gagal">10.
+                                            Sebutkan dan jelaskan Hasil sharing resource dalam jaringan yang di anggap gagal??</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-resource-curse">11.
+                                            apa yang dimaksud resource curse ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#anggota-perangkat-lunak-sistem-yang-di-sebut-juga-dengan-resource-allocator-adalah%e2%80%8b">12.
+                                            anggota perangkat lunak sistem yang di sebut juga dengan resource allocator adalah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#istilah-share-resource">13.
+                                            Istilah share resource</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#anggota-perangkat-lunak-sistem-yg-disebut-juga-dgn-resource-allocator-adalah">14.
+                                            Anggota perangkat lunak sistem yg disebut juga dgn resource allocator adalah</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-mengapa-dalam-perkembangan-sofware-pada-saat-ini-membutuhkan-semakin-meningkatnya-resource-harware">15.
+                                            jelaskan mengapa dalam perkembangan  sofware pada saat ini membutuhkan semakin meningkatnya  resource harware? </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-bedanya-renewable-resource-dan-unrenewable-resource">16.
+                                            apa bedanya renewable resource dan unrenewable resource</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pengertian1-mekanisme-boot-2-mekanisme-boot-3-resource-allocator-4-handler-5-driver">17.
+                                            pengertian:1 .Mekanisme Boot
+                    2. Mekanisme Boot
+                    3. Resource Allocator
+                    4. Handler
+                   5. Driver</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-renewable-resource-dan-urenewablejelaskan">18.
+                                            Apa yang dimaksud dengan renewable resource dan urenewable?jelaskan!</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pengertian-dari-human-resource-acquisition-hrahuman-resource-development-hrdhuman-resource-retention-hrrhuman-resource-engagement-hrehubinhris">19.
+                                            pengertian dari :
+ human resource acquisition (HRA)
+human resource development (HRD)
+human resource retention (HRR)
+human resource engagement (HRE)
+HUBIN
+HRIS</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yg-dimaksud-dengan-virus-vital-information-resource-under-siege-%e2%80%8b">20.
+                                            Apa yg dimaksud dengan VIRUS ( Vital Information Resource Under Siege ) ?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-yang-dimaksud-dengan-enterprise-resource-planning">21.
+                                            Jelaskan yang dimaksud dengan enterprise resource planning</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-itu-yg-di-maksud-renewable-resource-natural-resource-energy-resource-unrenewable-resource">22.
+                                            apa itu yg di maksud renewable resource, natural resource, energy resource, unrenewable resource</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-apa-yang-dimaksud-dengan-resource-sharing">23.
+                                            jelaskan apa yang dimaksud dengan Resource sharing?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-arti-dari-resource-sharing">24.
+                                            apa arti dari resource sharing?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-mengapa-dalam-perkembangan-software-pada-saat-ini-membutuhkan-semakin-meningkatnya-kebutuhan-resource-hardware">25.
+                                            jelaskan mengapa dalam perkembangan software pada saat ini membutuhkan semakin meningkatnya kebutuhan resource hardware?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#arti-dari-sharing-resource">26.
+                                            arti dari sharing resource</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apakah-yang-dimaksud-sistem-operasi-sebagai-resouce-allocator-pada-komputer">27.
+                                            Apakah yang dimaksud sistem operasi sebagai resouce allocator pada komputer</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-apa-yang-dimaksud-dengan-erp-enterprise-resource-planning-dan-beri-contohnya">28.
+                                            Jelaskan apa yang dimaksud dengan ERP (Enterprise Resource Planning) dan beri contohnya</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-manfaat-jaringan-sebagai-sharing-resource-dan-berilah-contonya">29.
+                                            jelaskan manfaat jaringan sebagai sharing resource dan berilah contonya</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-perbedaan-dari-human-resource-development-personal-administration-dan-human-resource-manajemen">30.
+                                            jelaskan perbedaan dari Human Resource Development, Personal Administration dan Human Resource Manajemen !</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-istilah-resource-sharing-dalam-jaringan-komputer-dan-berikan-contohnya">31.
+                                            jelaskan istilah resource sharing dalam jaringan komputer dan berikan contohnya!</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-arti-dari-resource-sharing">32.
+                                            apa arti dari resource sharing?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#berikan-penjelasan-tentang-pembagian-sektor-bisnis-yang-masuk-katagori-dengan-ketergantungan-bahan-baku-pada-natural-resource-dan-non-natural-resource">33.
+                                            Berikan penjelasan tentang pembagian sektor bisnis yang masuk katagori dengan ketergantungan bahan baku pada natural resource dan non natural resource !</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#anggota-perangkat-lunak-yg-disebut-juga-dengan-resource-allocator-adalah">34.
+                                            Anggota perangkat lunak yg disebut juga dengan resource allocator adalah</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-resource-sharing">35.
+                                            apa yang dimaksud dengan RESOURCE SHARING </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pengertian1-mekanisme-boot-2-mekanisme-boot-3-resource-allocator-4-handler-5-driver">36.
+                                            pengertian:1 .Mekanisme Boot
+                    2. Mekanisme Boot
+                    3. Resource Allocator
+                    4. Handler
+                   5. Driver</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-abiotik-resource">37.
+                                            Apa yang dimaksud Abiotik resource</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-jenis-jenis-sharing-resource">38.
+                                            Jelaskan jenis jenis sharing resource</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-yang-di-maksud-biotic-resource">39.
+                                            Jelaskan yang di maksud Biotic resource</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#berikan-penjelasan-tentang-pembagian-sektor-bisnis-yang-masuk-katagori-dengan-ketergantungan-bahan-baku-pada-natural-resource-dan-non-natural-resource">40.
+                                            .Berikan penjelasan tentang pembagian sektor bisnis yang masuk katagori dengan ketergantungan bahan baku pada natural resource dan non natural resource !</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="contoh-resource-allocator-adalah%e2%80%8b">
+                            1. contoh resource allocator adalah​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>proses penunjukan sumber daya komputer.</p><p></p><p><strong>Penjelasan:</strong></p><p>semogs membantu jangan lupa foloww yZz</p><br />
+                                            <h2 class="ez-toc-section" id="salah-satu-peran-sistem-oprasi-adalah-sebagai-resource-allocatorapakah-maksud-dari-hal-tersebut">
+                            2. salah satu peran sistem oprasi adalah sebagai resource allocator,apakah maksud dari hal tersebut?</h2><br />
+                        Resource Allocator. Sistem Operasi bertugas mengatur dan mengalokasikan sumber daya dari perangkat.<br />
+                                            <h2 class="ez-toc-section" id="perangkat-lunak-yang-berfungsi-sebagai-resource-allocator-adalah">
+                            3. perangkat lunak yang berfungsi sebagai resource allocator adalah</h2><br />
+                        Windows, Linux, Macintos dll.<br /><br />Resource allocator adalah nama lain dari Sistem Operasi.<br />
+                                            <h2 class="ez-toc-section" id="yang-bukan-bagian-penting-dari-sistem-operasi-adalah-%c2%a0a-mekanisme-bootb-driverc-resource-allocatord-hardware%e2%80%8b">
+                            4. yang bukan bagian penting dari sistem operasi adalah... a. Mekanisme Bootb. Driverc. Resource Allocatord. Hardware​</h2><br />
+                        <p>Yang bukan bagian penting dari sistem operasi adalah<strong> </strong><strong>hardware (d)</strong><strong>. Hardware adalah perangkat keras komputer. Hardware berfungsi sebagai input, output, pemproses dan menyimpan data. Sedangkan sistem operasi merupakan melakukan kontrol pada hardware dan sofware. </strong></p><p></p>Pembahasan<p>Sistem operasi komputer adalah software lapisan pertama pada komputer. Sistem operasi bertugas melakukan kontrol dan manajemen perangkat keras serta operasi-operasi dasar sistem. <strong>Sistem operasi terdiri atas bagian-bagian penting yaitu:</strong></p>Mekanisme BootCommand Interpreter atau ShellDriverResource AllocatorHandler<p></p><p>Pelajari lebih lanjut tentang materi sistem operasi brainly.co.id/tugas/2842436</p><p></p><p><strong>#BelajarBersamaBrainly</strong></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-di-maksud-dengan-resource-sharing-dalam-memanfaatkan-sebuah-jaringan-komputer">
+                            5. apa yang di maksud dengan resource sharing dalam memanfaatkan sebuah jaringan komputer</h2><br />
+                        Resource sharing , adalah pengunaan sumberdaya yang secara bersama-sama. Contohnya seorang pengguna yang berada di 100 km jauhnya dari suatu data, tidak mendapatkan kesulitan dalam menggunakan data tersebut dan seolah olah data tersebut berada di dekatnya. Hal ini sering diartikan bahwa jaringan komputer mengatasi masalah jarak.<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-mengapa-dalam-perkembangan-software-pada-saat-ini-membutuhkan-semakin-meningkatnya-kebutuhan-resource-hardware">
+                            6. Jelaskan    mengapa    dalam    perkembangan    software    pada    saat    ini membutuhkan semakin meningkatnya kebutuhan resource hardware?</h2><br />
+                        Guna mendukung berjalannya software pada perangkat agar hasilnya maksimal<br />
+                                            <h2 class="ez-toc-section" id="apa-perbedaan-sumber-daya-alam-natural-resource-dengan-barang-sumber-daya-resource-komuditi">
+                            7. apa perbedaan sumber daya alam natural resource dengan barang sumber daya resource komuditi</h2><br />
+                        <p><strong>Jawaban:</strong></p>sumberdaya diperlukan bukan karena dirinya sendiri, melainkan diperlukan sebagai sarana untuk mencapai tujuan, sedangkan barang sumber daya dimaksudkan sebagai fungsi produksi dr sumber daya alam tsb.<p><strong>Penjelasan:</strong></p><p>Sumber daya bisa juga menghasilkan utilitas tanpa melakukan proses produksi.</p><p>Jumlah dan kualitas barang sumber daya yang dipakai dalam proses produksi dapat menigkatkan produksi barang dan jasa bila dikombinasikan dengan factor produksi lain.</p><p></p><p>Hi! Bagaimana? Kini pertanyaanmu sudah terjawab, berikutnya kamu bisa follow atau jadikan jawaban ini sebagai brainlest answers yaa...thanks! :D</p><p></p><p>Salam, Mas Aryo.</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-mengapa-dalam-perkembangan-software-pada-saat-ini-membutuhkan-semakin-meningkatnya-kebutuhan-resource-hardware">
+                            8. jelaskan mengapa dalam perkembangan software pada saat ini membutuhkan semakin meningkatnya kebutuhan resource hardware</h2><br />
+                        karena makin lama software akan semakin bagus,, nah dari situ kita juga harus membutuhkan hardware yang bagus untuk menjalankan software tersebut <br />
+                                            <h2 class="ez-toc-section" id="1-jelaskan-yang-dimaksud-dengan-enterprise-resource-planning-erp">
+                            9. 1. jelaskan yang dimaksud dengan enterprise resource planning (erp)</h2><br />
+                        <p><strong>Pengertian dari enterprise resource planning (erp) adalah </strong>suatu sistem informasi yang dikhususkan bagi perusahaan manufaktur maupun perusahaan jasa yang memiliki peran dalam mengintegrasikan dan mengotomasikan proses bisnis yang berhubungan dengan aspek operasi, aspek produksi maupun aspek distribusi di perusahaan yang bersangkutan. Semua arus informasi melekat dengan melalui database terpusat yang dikelola dari berbagai unit kerja dalam suatu organisasi.</p><p></p><p><strong>Pembahasan:</strong></p><p><strong>Berikut ini merupakan keuntungan saat menerapkan ERP (Enterprise Resource Planning) yaitu sebagai berikut:</strong></p>Data keuangan terintegrasi, sehingga manajemen dengan mudah dapat memperoleh data yang up to date dan dapat mengatur keuangan menjadi lebih baik.Data dan informasi terstandarisasi. Database dapat membentuk data yang standar, sehingga dapat memperoleh informasi dengan mudah dan lebih fleksibel.Proses operasi terstandarisasi. Semua sistem sudah terstandarisasi, maka semua divisi memakai sistem dengan cara yang sama. Sehingga menjadi lebih efektif dan juga efisien.<p><strong>Adapun yang menjadi kelemahan ketika menerapkan ERP (Enterprise Resource Planning) diantaranya</strong> <strong>adalah sebagai berikut:</strong></p>Seorang pegawai yang belum siap dengan sistem yang baru.Strategi operasi yang tidak sesuai dengan business process.Waktu dan biaya yang melebihi anggaran.Persiapan implementasi tidak dilaksanakan dengan baik.<p><strong>Adapun yang termasuk ke dalam contoh enterprise resource planning (erp) adalah sebagai berikut:</strong></p>Purchasing yang berfungsi sebagai suatu proses pembelian bahan baku dan lain sebagainya.Production planning yang berfungsi untuk merencanakan kapasitas produksi.Sales order processing yang berfungsi sebagai penjadwalan, pengiriman, dan juga invoice pesanan.Financial acoounting yang berfungsi untuk menghasilkan laporan keuangan dalam suatu perusahaan.Human resources yang berfungsi sebagai pengelola sumber daya manusia.<p><strong></strong></p><p><strong>Pelajari Lebih Lanjut</strong></p><p>Pelajari lebih lanjut materi tentang yang dimaksud dengan enterprise resource planning (erp) https://brainly.co.id/tugas/25032051</p><p></p><p><strong>#BelajarBersamaBrainly #SPJ4</strong></p><br />
+                                            <h2 class="ez-toc-section" id="sebutkan-dan-jelaskan-hasil-sharing-resource-dalam-jaringan-yang-di-anggap-gagal">
+                            10. Sebutkan dan jelaskan Hasil sharing resource dalam jaringan yang di anggap gagal??</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Keamanan jaringan (bahasa Inggris: network security) terdiri dari kebijakan dan praktik yang diterapkan untuk mencegah dan memantau akses yang tidak sah, penyalahgunaan, modifikasi, atau penolakan jaringan komputer dan sumber daya yang dapat diakses jaringan. Keamanan jaringan melibatkan otorisasi akses ke data dalam jaringan, yang dikendalikan oleh administrator jaringan. Pengguna memilih atau diberi ID dan kata sandi atau informasi otentikasi lainnya yang memungkinkan mereka mengakses informasi dan program dalam otoritas mereka. Keamanan jaringan mencakup berbagai jaringan komputer, baik publik maupun swasta, yang digunakan dalam pekerjaan sehari-hari: melakukan transaksi dan komunikasi antara bisnis, lembaga pemerintah, dan individu. Jaringan dapat bersifat pribadi, seperti di dalam perusahaan, dan lainnya yang mungkin terbuka untuk akses publik. Keamanan jaringan terlibat dalam organisasi, perusahaan, dan jenis lembaga lainnya. Itu sesuai dengan judulnya: mengamankan jaringan, serta melindungi dan mengawasi operasi yang sedang dilakukan. Cara paling umum dan sederhana untuk melindungi sumber daya jaringan adalah dengan memberinya nama unik dan kata sandi yang sesuai.</p><p><strong>Penjelasan:</strong></p><p>semoga membantu </p><p><strong>Jawaban:</strong></p><p>Keamanan jaringan dimulai dengan otentikasi, biasanya dengan nama pengguna dan kata sandi. Karena ini hanya memerlukan satu detail yang mengautentikasi nama pengguna — mis., Kata sandi — ini terkadang disebut otentikasi satu faktor. Dengan otentikasi dua faktor, sesuatu yang 'dimiliki' pengguna juga digunakan (misalnya, token keamanan atau 'dongle', kartu ATM, atau ponsel); dan dengan otentikasi tiga faktor, sesuatu yang 'dimiliki' pengguna juga digunakan (misalnya, sidik jari atau pemindaian retina).
+</p><p>
+</p><p>Setelah diautentikasi, firewall memberlakukan kebijakan akses seperti layanan apa yang diizinkan untuk diakses oleh pengguna jaringan. Meskipun efektif untuk mencegah akses yang tidak sah, komponen ini mungkin gagal memeriksa konten yang berpotensi berbahaya seperti worm komputer atau Trojan yang dikirim melalui jaringan. Perangkat lunak anti-virus atau sistem pencegahan intrusi (IPS) membantu mendeteksi dan menghambat tindakan malware tersebut. Sistem deteksi intrusi berbasis anomali juga dapat memantau jaringan seperti lalu lintas wireshark dan dapat dicatat untuk tujuan audit dan untuk analisis tingkat tinggi selanjutnya. Sistem yang lebih baru yang menggabungkan machine learning tanpa pengawasan dengan analisis lalu lintas jaringan lengkap dapat mendeteksi penyerang jaringan aktif dari orang dalam yang berniat jahat atau penyerang eksternal yang ditargetkan yang telah menyusupi mesin atau akun pengguna.
+</p><p>
+</p><p>Komunikasi antara dua host menggunakan jaringan dapat dienkripsi untuk menjaga privasi.
+</p><p>
+</p><p>Honeypots, yang pada dasarnya memikat sumber daya yang dapat diakses jaringan, dapat digunakan dalam jaringan sebagai alat pengawasan dan peringatan dini, karena honeypots biasanya tidak diakses untuk tujuan yang sah. Teknik yang digunakan oleh penyerang yang mencoba untuk mengkompromikan sumber daya umpan ini dipelajari selama dan setelah serangan untuk mengawasi teknik eksploitasi baru. Analisis tersebut dapat digunakan untuk lebih memperketat keamanan jaringan sebenarnya yang dilindungi oleh honeypot. Honeypot juga dapat mengarahkan perhatian penyerang dari server yang sah. Honeypot mendorong penyerang untuk menghabiskan waktu dan energi mereka di server umpan sambil mengalihkan perhatian mereka dari data di server sebenarnya. Mirip dengan honeypot, honeynet adalah jaringan yang disiapkan dengan kerentanan yang disengaja. Tujuannya juga untuk mengundang serangan sehingga metode penyerang dapat dipelajari dan informasi dapat digunakan untuk meningkatkan keamanan jaringan. Sebuah</p><p><strong>Penjelasan:</strong></p><p>Segi-segi keamanan didefinisikan dari kelima point ini:
+</p><p>
+</p>Confidentiality, Mensyaratkan bahwa informasi (data) hanya bisa diakses oleh pihak yang memiliki wewenang.
+Integrity, Mensyaratkan bahwa informasi hanya dapat diubah oleh pihak yang memiliki wewenang.
+Availability, Mensyaratkan bahwa informasi tersedia untuk pihak yang memiliki wewenang ketika dibutuhkan.
+Authentication, Mensyaratkan bahwa pengirim suatu informasi dapat diidentifikasi dengan benar dan ada jaminan bahwa identitas yang didapat tidak palsu.
+Nonrepudiation, Mensyaratkan bahwa baik pengirim maupun penerima informasi tidak dapat menyangkal pengiriman dan penerimaan pesan.<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-resource-curse">
+                            11. apa yang dimaksud resource curse ?</h2><br />
+                        Human Resource Departement yang artinya secara harfiah Bagian Sumber 
+Daya Manusia yang dalam bahasa Indonesia secara umum diartikan sebagai 
+Bagian Personalia. <br />
+Tugas-tugasnya antara lain : <br />
+1. Perekrutan Karyawan <br />
+2. Pengembangan Karyawan (Sumber Daya Manusia) dng melakukan <br />
+    pelatihan-pelatihan. <br />
+3. Pengawasan thd kinerja karyawan (harian, bulanan dan tahunan) <br />
+    sebagai bahan evaluasi tahunan per karyawan. <br />
+4. Penghitungan gaji seluruh karyawan berdasarkan absensi, prestasi  <br />
+    dan lain2. <br />
+5. Mengatur mutasi karyawan jika dibutuhkan.  
+        <br />kutukan sumber daya alam<br />
+                                            <h2 class="ez-toc-section" id="anggota-perangkat-lunak-sistem-yang-di-sebut-juga-dengan-resource-allocator-adalah%e2%80%8b">
+                            12. anggota perangkat lunak sistem yang di sebut juga dengan resource allocator adalah​</h2><br />
+                        <p><strong>Jawaban: Windows, Linux, Ubuntu, dan Mac OS</strong></p><p></p><p><strong>Penjelasan: Perlu diketahui bahwa resource allocation merupakan proses penunjukan sumber daya komputer untuk program tertentu supaya program tersebut bisa mempergunakannya. Dalam hal ini resource allocation dilakukan oleh sistem operasi karena sistem operasi memberikan sumber daya kepada aplikasi untuk bisa menjalankan program dengan baik.</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="istilah-share-resource">
+                            13. Istilah share resource</h2><br />
+                        memungkin dua buah proses atau lebih dapat menggunakan data/perangkat keras dalam waktu yang bersamaan.<br />
+                                            <h2 class="ez-toc-section" id="anggota-perangkat-lunak-sistem-yg-disebut-juga-dgn-resource-allocator-adalah">
+                            14. Anggota perangkat lunak sistem yg disebut juga dgn resource allocator adalah</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>resource allocation merupakan proses penunjukan sumber daya komputer untuk program tertentu supaya program tersebut bisa mempergunakannya. Dalam hal ini resource allocation dilakukan oleh sistem operasi karena sistem operasi memberikan sumber daya kepada aplikasi untuk bisa menjalankan program dengan baik.</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-mengapa-dalam-perkembangan-sofware-pada-saat-ini-membutuhkan-semakin-meningkatnya-resource-harware">
+                            15. jelaskan mengapa dalam perkembangan  sofware pada saat ini membutuhkan semakin meningkatnya  resource harware? </h2><br />
+                        <p>Hal ini terkait dengan evolusi dari dunia komputer itu sendiri, di mana pada awalnya penggunaan komputer hanya digunakan untuk berhitung dan kemudian berkembang sedemikian rupa kebentuknya saat ini, di mana fungsinya telah bermetamorfosa menjadi "penunjang kehidupan" manusia dengan bentuk dan fungsi yang semakin kompleks. Sebagai imbas dari perkembangan tersebut, software membutuhkan space komputasi yang lebih besar agar proses komputasi sebagai konsekuensi dari berjalannya software dapat lebih cepat dieksekusi, di mana proses komputasi inilah yang akhirnya melahirkan kebutuhan atas resource hardware yang semakin besar. </p><br />
+                                            <h2 class="ez-toc-section" id="apa-bedanya-renewable-resource-dan-unrenewable-resource">
+                            16. apa bedanya renewable resource dan unrenewable resource</h2><br />
+                        renewable resource adalah sumber daya alam yang dapat diperbarui.<br />Sedangkan unrenewable resource adalah sumber daya alam yang tidak dapat diperbarui.<br /><br />Maaf, ya kalo salah:)<br />
+                                            <h2 class="ez-toc-section" id="pengertian1-mekanisme-boot-2-mekanisme-boot-3-resource-allocator-4-handler-5-driver">
+                            17. pengertian:1 .Mekanisme Boot
+                    2. Mekanisme Boot
+                    3. Resource Allocator
+                    4. Handler
+                   5. Driver</h2><br />
+                        1. Proses meletakkan kernel (inti dari sistem operasi) ke dalam memori ketika pertama kali mengaktifkan komputer.<br />2. Proses penunjukan sumberdaya komputer untuk program tertentu supaya program tersebut bisa bisa menggunakannya.<br />3. Untuk mengendalikan sistem perangkat agar terhindar dari kekeliruan (error) dan penggunaan sumber daya yang tidak perlu.<br />4. Program/software agar komputer bisa berinteraksi dengan hardware sekaligus mengontrol kinerja hardware.<br />Semoga membantu...<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-renewable-resource-dan-urenewablejelaskan">
+                            18. Apa yang dimaksud dengan renewable resource dan urenewable?jelaskan!</h2><br />
+                        Yang dimaksud dengan renewable resource dan urenewableJawabanPendahuluan<p>Sumber daya alam  merupakan segala sesuatu yang berasal dari alam yang dapat dimanfaatkan manusia untuk kehidupan.</p><br />Pembahasan<p><strong>1. Renewable resource (Sumber Daya Alam Dapat Diperbaharui)</strong></p><p>Yaitu sumber daya alam yang tidak akan habis walaupun digunakan secara terus-menerus. Contoh: Udara, angin, sinar matahari, air, tanah, dan masih banyak lagi.</p><p><strong>2. Urenewable  (Sumber Daya Alam Tidak Dapat Diperbaharui)</strong></p><p>Yaitu sumber daya yang apabila digunakan secara terus menerus sumber daya alam tersebut akan habis dan tidak dapat diperbaharui karena pembentukannya sangat lama. Contoh: Minyak bumi, batu bara, timah, dan masih banyak lagi.</p><br />Pelajari lebih hidup<p>1. Upaya untuk melestarikan sumber daya alam brainly.co.id/tugas/792836</p><br />----------------------------------------------<p>Semoga membantu.</p><br /><p>Detil tambahan</p><br /><p>Kelas:  9 SMP</p><p>Mapel:  Geografi</p><p>Kategori: -</p><p>Kata kunci:  Renewable resource dan urenewable.</p><br /><br />
+                                            <h2 class="ez-toc-section" id="pengertian-dari-human-resource-acquisition-hrahuman-resource-development-hrdhuman-resource-retention-hrrhuman-resource-engagement-hrehubinhris">
+                            19. pengertian dari :
+ human resource acquisition (HRA)
+human resource development (HRD)
+human resource retention (HRR)
+human resource engagement (HRE)
+HUBIN
+HRIS</h2><br />
+                        HRD  adalah suatu proses menangani berbagai masalah pada ruang lingkup karyawan, pegawai, buruh, manajer dan tenaga kerja lainnya untuk dapat menunjang aktifitas organisasi atau perusahaan demi mencapai tujuan yang telah ditentukan. <br />
+                                            <h2 class="ez-toc-section" id="apa-yg-dimaksud-dengan-virus-vital-information-resource-under-siege-%e2%80%8b">
+                            20. Apa yg dimaksud dengan VIRUS ( Vital Information Resource Under Siege ) ?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p><strong></strong></p><p>Virus sendiri memiliki kepanjangan yaitu <strong>Vital Information Resource Under Siege</strong>. Di mana, ada banyak jenis dan kemampuan yang berbeda-beda pada setiap virus dalam mengganggu aktivitas komputasi. Virus sendiri masuk ke dalam sistem secara ilegal, lalu menggandakan diri serta mengacaukan sistem dari dalam.</p><p></p><p>Virus Komputer merupakan suatu program atau aplikasi yang dapat memperbanyak, dan menyebar dengan sendirinya, dan menyebabkan efek negatif pada komputer yang terjangkit. </p><p></p><p>Biasanya virus masuk kedalam komputer dengan cara menyisipkan dirinya dalam suatu file ataupun program. Efek yang ditimbulkan virus komputer pun beragam, mulai dari hilangnya file dari komputer, timbul error yang tidak biasa (misalnya freeze), program tidak dapat digunakan, hingga file yang dicuri. </p><p></p><p>Virus juga dapat memungkinkan untuk merusak hardware pada komputer. Komputer yang terjangkit banyak virus biasanya sudah tidak bisa di bersihkan dengan antivirus lagi, dan salah satu caranya adalah membersihkan / format harddisk dalam komputer.</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-yang-dimaksud-dengan-enterprise-resource-planning">
+                            21. Jelaskan yang dimaksud dengan enterprise resource planning</h2><br />
+                        Perencanaan sumber daya perusahaan, atau sering disingkat ERP dari istilah bahasa Inggris-nya Enterprise Resource Planning , adalah sistem informasi yang diperuntukkan bagi perusahan manufaktur maupun jasa yang berperan mengintegrasikan dan mengotomasikan proses bisnis yang berhubungan dengan aspek operasi, produksi maupun distribusi di perusahaan bersangkutan<br />
+                                            <h2 class="ez-toc-section" id="apa-itu-yg-di-maksud-renewable-resource-natural-resource-energy-resource-unrenewable-resource">
+                            22. apa itu yg di maksud renewable resource, natural resource, energy resource, unrenewable resource</h2><br />
+                        Renewable Resources: Sumber daya alam yang dapat diperbarui<br />Unrenewable resources: SDA yang tibak dapat diperbarui<br />Natural Resource: Sumber Daya Alam<br />Enerfy resources: Sumber Energi<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-apa-yang-dimaksud-dengan-resource-sharing">
+                            23. jelaskan apa yang dimaksud dengan Resource sharing?</h2><br />
+                        <p>Resource sharing adalah kegiatan-kegiatan yang dilakukan secara bersama-sama oleh sekelompok perpustakaan yang tergabung dalam sebuah konsorsium atau jaringan yang bertujuan untuk meningkatkan layanan dan mengurangi biaya pengembangan koleksi.</p><p>semoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="apa-arti-dari-resource-sharing">
+                            24. apa arti dari resource sharing?</h2><br />
+                        berbagi sumber daya<br />sumber daya yang dipakai secara bersama-sama oleh banyak user, sumber daya tersebut adalah sebuah jaringan/koneksi komputer. Dengan mengijinkan masing-masing user yang memiliki tingkat pengetahuan, kepentingan, dan motivasi yang berbeda di dalam memanfaatkan sumber daya tersebut.<br /><br /><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-mengapa-dalam-perkembangan-software-pada-saat-ini-membutuhkan-semakin-meningkatnya-kebutuhan-resource-hardware">
+                            25. jelaskan mengapa dalam perkembangan software pada saat ini membutuhkan semakin meningkatnya kebutuhan resource hardware?</h2><br />
+                        Karena pihak developer akan membuat inovasi dan perbaikan terus pada sebuah software yang lebih baik dari pendahulunya seperti menambah fitur-fitur baru atau memperbaikinya. Nah, dengan bertambahnya waktu maka software tersebut akan semakin banyak fitur-fitur didalamnya. Dan untuk memaksimalkan proses, sebuah software akan membutuhkan banyak proses dan program lainnya untuk menjalankan software tersebut. Aplikasi akan menampilkan banyak fitur yang tentunya akan menambahkan beban pada RAM<br />
+                                            <h2 class="ez-toc-section" id="arti-dari-sharing-resource">
+                            26. arti dari sharing resource</h2><br />
+                        sharing resources<br /><br />Sistem operasi jaringan: administrasi berbagi sumber daya<br />Pengertian Resource Sharing : Penggunaan perangkat keras secara bersama-sama oleh semua prosesor yang ada.resource shareing pada jaringan dapat dilakukan sharing file dan printer,fasilitas tersebut membuat,seseorang dapat mengakses printer maupun file yang ada dari komputer lain dengan resource sharing kita dapat berbagi data dengan komputer yang satu dengan yang lain .<br />Fungsi dan Tujuan Sistem Operasi Komputer<br />Efisiensi : sistem operasi resource sharing memungkinkan sumber daya sistem komputer untuk digunakan dengan cara yang efisiensi dalam pembagian data<br />Kemudahan : sistem operasi resoure sharing membuat komputer lebih mudah dipakai dan memberikan kenyamanan untuk pengguna.<br />Kemampuan berevolusi : sistem operasi dalam resource sharing harus disusun sedemikian rupa sehingga memungkinkan pengembangan yang efektif, pengujian, dan penerapan fungsi-fungsi sistem yang baru tanpa mengganggu layanan yang telah ada.<br />Konfigurasi Beserta pengujian hasil file sharing ;<br />Sharing File dari Linux ke Windows dengan SAMBA<br /><br />Samba<br />Samba server merupakan aplikasi yang berperan penting untuk melakukan sharing, terlebih apabila dalam menggunakan sistem operasi yang memiliki platform yang berbeda (misal : Linux – Windows), tidak seperti protocol seperti FTP (File Transfer Protocol) sampa hanya bisa melakukan sharing / berbagi file dalam skup / lingkup jaringan yang bisa dibilang kecil.<br />Ok, dilanjutkan dengan konfigurasi SAMBA, dalam tulisan ini saya menggunakan sistem operasi Debian, sebagai server (sumber sharing). pastikan terlebih dahulu kita terkoneksi dengan server repository, bisa menggunakan repository yang ada di Internet / Intranet atau bisa menggunakan DVD-Repository. ketikkan perintah berikut untuk menginstall samba :<br /># apt-get install samba<br /><br />Selanjutnya buatlah folder / direktori yang selanjutnya akan kita sharing / bagikan ke komputer client, dengan mengetikkan perintah berikut :<br /><br /># mkdir /root/sharing<br /><br />selanjutnya rubahlah akses permission pada folder tersebut, agar dapat diakses, dibaca, dan ditulis oleh semua user, dengan mengetikkan perintah berikut :<br /><br /># chmod 777 -R share<br /><br />selanjutnya kita buatkan user &amp; password (samba) yang akan mengakses folder / file yang akan kita sharing, dengan mengetikkan perintah berikut :<br /><br /># useradd tamu<br /><br /># smbpasswd –a tamu<br /><br />Seperti halnya dengan protocol FTP, kita bisa membuatkan / menyediakan layanan samba dengan User-Mode danGues-mode (Anony Mode).  Perbedaan antara kedua mode tersebut adalah sebagai berikut :<br /><br />User Mode : merupakan mode yang hanya dapat mengizinkan user tertentu yang dapat mengakses file yang kita sharing / bagikan.<br /><br />Guest-Mode (Anony Mode) : merupakan mode yang mengizinkan semua user / pengguna untuk mengakses semua file yang kita sharing.<br /><br />Sudah cukup jelas ??? bukan,… ok pada artikel kali ini kita akan belajar bagaimana cara menerapkan mode akses samba pada kedua mode diatas.<br /><br />1. User Mode<br /><br />lakukan konfigurasi pada file samba, yang terletak di (/etc/samba/smb.conf) dengan menggunakan file editor (nano).<br /><br /># nano /etc/samba/smb.conf<br /><br />Setelah masuk pada file editor (smb.conf) selanjutnya cari baris berikut :<br /><br /># security = user<br /><br />Selanjutnya hilangkan tanda hash (#) pada baris diatas. sehingga menjadi seperti pada gambar berikut :<br /><br /> <br /><br />Keterangan :<br /><br />Security = user : merupakan akses keamanan yang ditujukan untuk user / pengguna tertentu, artinya hanya pengguna tertentu / yang diizinkan yang dapat mengakses file yang akan dibagikan.<br /><br />Selanjutnya lakukan pencarian pada baris “Share Definitions”, dengan mengetikkan tombol kombinasi (Ctrl + W) selanjutnya mengetikkan keyword diatas, atau seperti yang ditunjukkan pada gambar berikut :<br /><br /> <br /><br /><br />Keterangan :<br /><br />path : merupakan direktori yang akan di share<br /><br />browseable : hak yang diberikan kepada user, untuk dapat melakukan browse pada file / folder yang kita sharing.<br /><br />writeable : hak akses tulis, agar pengguna dapat melakukan perubahan (edit) pada file yang disharing / bagikan.<br /><br />valid users : merupakan user yang dapat / dizinkan untuk mengakses file yang dibagikan<br /><br />admin users : merupakan user yang memiliki hak akses administrator terhadap file tersebut, secara default admin users dapat diisi dengan root.<br /><br />Setelah itu simpan konfigurasi anda, dengan mengetikkan tombol kombinasi (Ctrl + O) untuk menyimpan, dan untuk keluar ketikkan (Ctrl + X), selanjutnya agar konfigurasi bisa terbaca restart service (daemon) samba, dengan mengetikkan perintah berikut :<br /><br /> <br /><br />Setelah proses restart selesai, selanjutnya, lakukan pengujian dari sisi server dengan mengetikkan perintah berikut :<br /><br /># testparam<br /><br /> <br /><br />Selanjutnya lakukan pengujian melalui client, dengan mengetikkan IP-address dari server, pada Window-Explorer, contoh : //10.12.111.189. Berikut pengujian yang dilakukan pada client (Windows 7) dengan mode 1 (User-Mode)<br /><br /><br />  Proses Login menggunakan Username &amp; <br /><br /><br />Password (Samba) Proses Login berhasil…!!! <br /><br />♤♤♡SEMOGA MEMBANTU♡♤♤<br />
+                                            <h2 class="ez-toc-section" id="apakah-yang-dimaksud-sistem-operasi-sebagai-resouce-allocator-pada-komputer">
+                            27. Apakah yang dimaksud sistem operasi sebagai resouce allocator pada komputer</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>topeng kotak amal masjid</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-apa-yang-dimaksud-dengan-erp-enterprise-resource-planning-dan-beri-contohnya">
+                            28. Jelaskan apa yang dimaksud dengan ERP (Enterprise Resource Planning) dan beri contohnya</h2><br />
+                        <p><strong>ERP (Enterprise Resource Planning) adalah</strong> sistem informasi pada perusahaan jasa maupun manufaktur yang mengintegrasikan proses bisnis yang berhubungan dengan aspek produksi, distribusi, maupun operasi dalam meningkatkan kinerja perusahaan. Semua arus informasi terintegrasi melalui database terpusat yang dikelola oleh berbagai unit kerja dalam organisasi.
+</p><p><strong>Contohnya yaitu :
+</strong></p>Purchasing (untuk proses pembelian bahan baku dan lain-lain)
+Production planning (untuk merencanakan kapasitas produksi)
+Sales order processing (untuk penjadwalan, pengiriman, dan invoice pesanan)
+Financial acoounting (untuk menghasilkan laporan keuangan perusahaan)
+Human resources (untuk mengelola sumber daya manusia)
+<p>
+</p>Pembahasan
+<p><strong>Keuntungan menerapkan ERP (Enterprise Resource Planning) yaitu :
+</strong></p>Data keuangan terintegrasi, sehingga manajemen memperoleh data yang up to date dan dapat mengatur keuangan lebih baik.
+Data dan informasi terstandarisasi. Database membentuk data yang standar, sehingga bisa mendapatkan informasi dengan mudah dan fleksibel.
+Proses operasi terstandarisasi. Semua sistem telah terstandarisasi, maka semua divisi menggunakan sistem dengan cara yang sama. Sehingga menjadi lebih efektif dan efisien.
+<p><strong>Kelemahan menerapkan ERP (Enterprise Resource Planning) yaitu :
+</strong></p>Karyawan belum siap dengan system yang baru.
+Strategi operasi tidak sesuai business process.
+Waktu dan biaya melebihi anggaran.
+Persiapan implementasi tidak dilakukan degan baik.
+<p>
+</p>Pelajari lebih lanjut      
+<p>Demikian pembahasan mengenai ERP (Enterprise Resource Planning). Selanjutnya dapat dipelajari lebih lanjut pada link brainly di bawah ini :
+</p><p>Pengertian ERP (Enterprise Resource Planning) brainly.co.id/tugas/8175624
+</p><p>----------------------------------------------------------------------------
+</p>Detil Jawaban    
+<p><strong>Kelas</strong> : XII (SMA)    
+</p><p><strong>Mapel</strong> : Akuntansi
+</p><p><strong>Bab</strong> : Akuntansi sebagai Sistem Informasi
+</p><p><strong>Kode</strong> : 12.12.1
+</p><p>
+</p><p><strong>Kata kunci</strong> : ERP (Enterprise Resource Planning)</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-manfaat-jaringan-sebagai-sharing-resource-dan-berilah-contonya">
+                            29. jelaskan manfaat jaringan sebagai sharing resource dan berilah contonya</h2><br />
+                        Manfaat Resource Sharing adalah agar seluruh program, peralatan tau peripheral lainnya dapat dimanfaatkan oleh orang yang ada pada jaringan komputer tanpa terpengaruh oleh lokasi maupun pengaruh dari pemakai. Dengan adanya jaringan komputer, seluruh program dan alat-alat yang ada diperusahaan dapat digunakan secara efisien dan efektif yang mengurangi beban biaya yang digunakan oleh perusahaan.<br />Contoh : Konkret adalah printer dalam sebuah organisasi. Dari pada membeli 1 printer untuk tiap meja, maka lebih baik memanfaatkan jaringan komputer sehingga 1 printer dapat digunakan untuk 10 atau lebih komputer (user).<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-perbedaan-dari-human-resource-development-personal-administration-dan-human-resource-manajemen">
+                            30. jelaskan perbedaan dari Human Resource Development, Personal Administration dan Human Resource Manajemen !</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>HRD adalah sebuah divisi yang menjalankan perencanaan strategis sumber daya manusia atau ketenagakerjaan (HR planning) yang meliputi budgeting, penilaian SDM, seleksi dan perekrutan, penerima dan pemberhentian karyawan, pengembangan karir, pengelolaan organisasi, performance management, pensiun, industrial relationship, training, dan pengembangan sistem.</p><p></p><p>Berbeda dengan HRD yang menjalankan fungsinya sebagai master plan ,HRM lebih kepada memfasilitasi karyawan untuk mendukung kinerja mereka. Memastikan bahwa segala kebutuhan karyawan dapat terpenuhi, dan juga memastikan bahwa karyawan dapat hidup sejahtera. HRM memfasilitasi karyawan demi mencapai tujuan perusahaan.</p><p></p><p>Personel administrasi atau biasa dikenal dengan administrasi personalia</p><p>adalah kegiatan pencatatan segala kegiatan, surat menyurat yang berhubungan dengan orang-orang yang bergabung dalam suatu kelompok atau organisasi</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-istilah-resource-sharing-dalam-jaringan-komputer-dan-berikan-contohnya">
+                            31. jelaskan istilah resource sharing dalam jaringan komputer dan berikan contohnya!</h2><br />
+                        resource sharing adalah sharing file dalam 1 network antar 2 komputer atau lebih, contoh : windows homegroup<br />
+                                            <h2 class="ez-toc-section" id="apa-arti-dari-resource-sharing">
+                            32. apa arti dari resource sharing?</h2><br />
+                        sumber daya yang dipakai secara bersama-sama oleh banyak user, sumber daya tersebut adalah sebuah jaringan/koneksi komputer. Dengan mengijinkan masing-masing user yang memiliki tingkat pengetahuan, kepentingan, dan motivasi yang berbeda di dalam memanfaatkan sumber daya tersebut.Sumber untuk membagi jaringan dengan yang lain. Bisa dimaksudkan dengan komputer induk.<br />
+                                            <h2 class="ez-toc-section" id="berikan-penjelasan-tentang-pembagian-sektor-bisnis-yang-masuk-katagori-dengan-ketergantungan-bahan-baku-pada-natural-resource-dan-non-natural-resource">
+                            33. Berikan penjelasan tentang pembagian sektor bisnis yang masuk katagori dengan ketergantungan bahan baku pada natural resource dan non natural resource !</h2><br />
+                        <p>Sektor bisnis terdiri dari beberapa macam. Berikut adalah pembagian sektor bisnis dengan kategori ketergantungan bahan baku pada <strong>natural resource </strong>dan <strong>non natural resource</strong>:</p><strong>Natural Resource</strong><p>1) Sektor Bisnis Tobacco</p><p>2) Sektor Bisnis Peternakan</p><p>3) Sektor Bisnis Tekstil</p><p>4) Sektor Bisnis Makanan dan Minuman</p><p>5) Sektor Bisnis Plastik</p><p>6) Sektor Bisnis Konstruksi</p><p></p><strong>Non Natural Resource:</strong><p>1) Sektor Bisnis Angkatan Darat, Laut, dan Udara</p><p>2) Sektor Bisnis Retail</p><p>3) Sektor Bisnis Perhotelan</p><p>4) Sektor Bisnis Asuransi dan Perbankan</p><p>5) Sektor Bisnis Travel Agency</p><p></p><p><strong>Pembahasan:</strong></p><p><strong>Bahan baku </strong>sendiri memiliki pengertian sebagai suatu bahan yang dipilih untuk digunakan dalam pembuatan suatu produk. Bahan baku merupakan bahan yang belum mengalami pengolahan sama sekali. Contoh bahan baku adalah gula, telur, tepung, dan sebagainya.</p><p>Bahan baku terbagi menjadi <strong>natural resource </strong>dan <strong>non natural resource</strong>.</p>Natural Resource merupakan bahan produksi seperti zat atau organisme yang ditemukan di alam (SDA). Dalam hal SDA, negara Indonesia memiliki banyak sumber daya alam yang bisa dimanfaatkan. Sumber daya alam ini terbagi menjadi SDA yang dapat diperbaharui dan SDA yang tidak dapat diperbaharui. <p></p><p><strong>Pelajari lebih lanjut:</strong></p><p>Materi mengenai Bahan Baku Langsung dan Tidak Langsung pada https://brainly.co.id/tugas/1444887</p><p><strong>#BelajarBersamaBrainly #SPJ1</strong></p><br />
+                                            <h2 class="ez-toc-section" id="anggota-perangkat-lunak-yg-disebut-juga-dengan-resource-allocator-adalah">
+                            34. Anggota perangkat lunak yg disebut juga dengan resource allocator adalah</h2><br />
+                        <p>Windows, Linux, Macintos</p><p>Resource allocator adalah Sistem Operasi.</p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-resource-sharing">
+                            35. apa yang dimaksud dengan RESOURCE SHARING </h2><br />
+                        Resource Sharing adalah sumber daya yg dipakai scr bersama-sama oleh banyak user, sumher daya tersebut adalah sebuah jaringan/koneksi komputersumber daya yang dipakai secara bersama-sama oleh banyak user, sumber daya tersebut adalah sebuah jaringan/koneksi komputer. Dengan mengijinkan masing-masing user yang memiliki tingkat pengetahuan, kepentingan, dan motivasi yang berbeda di dalam memanfaatkan sumber daya tersebut.<br /><br />
+                                            <h2 class="ez-toc-section" id="pengertian1-mekanisme-boot-2-mekanisme-boot-3-resource-allocator-4-handler-5-driver">
+                            36. pengertian:1 .Mekanisme Boot
+                    2. Mekanisme Boot
+                    3. Resource Allocator
+                    4. Handler
+                   5. Driver</h2><br />
+                        1.Mekanisme boot adalah Proses meletakkan kernel (inti dari sistem operasi) ke dalam memori ketika pertama kali mengaktifkan komputer.<br />2. resource allocator adalah Proses penunjukan sumberdaya komputer untuk program tertentu supaya program tersebut bisa bisa menggunakannya.<br />3.  handler adalah Untuk mengendalikan sistem perangkat agar terhindar dari kekeliruan (error) dan penggunaan sumber daya yang tidak perlu.<br />4. driver adalah Program/software agar komputer bisa berinteraksi dengan hardware sekaligus mengontrol kinerja hardware. <br /><br /><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-abiotik-resource">
+                            37. Apa yang dimaksud Abiotik resource</h2><br />
+                        komponen alam yang tidak dapat diperbaruo. maksudnya komponen alam tersebut akan habis bila dilakukan tanpa penghematan<br /><br />semoga membantu, semangat belajarnya<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-jenis-jenis-sharing-resource">
+                            38. Jelaskan jenis jenis sharing resource</h2><br />
+                        1. Printer sharing2. File Sharing3. Active Directory4. Service Webserver IIS, FTP, TELNET, Gopher<br /><br /><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-yang-di-maksud-biotic-resource">
+                            39. Jelaskan yang di maksud Biotic resource</h2><br />
+                        biotic resource adaalah sumber daya alam yang dapat di perbaharui<br /><br />maaf kalo salah<br />Good luckbiotic adalah sumber daya biotik yang dimanfaatkan untuk manusia dijaman sekarang dan sangat bnyak manfaatnya<br />
+                                            <h2 class="ez-toc-section" id="berikan-penjelasan-tentang-pembagian-sektor-bisnis-yang-masuk-katagori-dengan-ketergantungan-bahan-baku-pada-natural-resource-dan-non-natural-resource">
+                            40. .Berikan penjelasan tentang pembagian sektor bisnis yang masuk katagori dengan ketergantungan bahan baku pada natural resource dan non natural resource !</h2><br />
+                        <p>Berikut <strong>sektor bisnis</strong> yang termasuk dalam kategori ketergantungan bahan baku pada <strong>natural resource</strong> dan <strong>non natural resource</strong>:</p><p><strong>Natural Resource</strong> : </p>Sektor Bisnis TobaccoSektor Bisnis PeternakanSektor Bisnis KonstruksiSektor Bisnis TekstilSektor Bisnis Makanan dan MinumanSektor Bisnis Plastik<p></p><p><strong>Non Natural Resource</strong>:</p>Sektor Bisnis Asuransi dan PerbankanSektor Bisnis RetailSektor Bisnis PerhotelanSektor Bisnis Travel AgencySektor Bisnis Angkatan Darat, Laut, dan Udara <p></p><p><strong>Pembahasan</strong>:</p><p><strong>Bahan baku</strong> merupakan bahan yang akan digunakan dalam pembuatan produk.</p><p><strong>Natural Resource</strong> adalah bahan produksi seperti <strong>zat atau organisme yang ditemukan di alam</strong>. Natural resource ini biasa dikenal dengan istilah <strong>Sumber Daya Alam</strong>. Dalam hal SDA ini, Indonesia dalah negara yang sangat kaya akan SDA dan juga SDM, sehingga perlu untuk dimanfaatkan dengan sebaik-baiknya oleh penduduk lokal Indonesia ini.</p><p></p><p><strong>Pelajari lebih lanjut:</strong></p><p>Materi tentang Argumentasi terkait eksistensi dan implementasi hukum dalam sektor bisnis</p><p></p><p><strong>#BelajarBersamaBrainly #SPJ1</strong></p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/XfauJTdkcKU?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>ti</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/ciri-ciri-gagal-psikotes.html">Ciri ciri Gagal Psikotes</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dan-fungsi-dari-ball-stylus-set.html">Pengertian Dan Fungsi Dari Ball Stylus Set</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/logika-gambar-psikotes.html">Logika Gambar Psikotes</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/atas-bawah-psikotes.html">Atas Bawah Psikotes</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dari-load-resistance.html">Pengertian Dari Load Resistance</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/soal-berbahasa-inggris-agama-islam-smp.html">Soal Berbahasa Inggris Agama Islam Smp</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dari-stek-menyambung-menempel-dan-merunduk.html">Pengertian Dari Stek Menyambung Menempel Dan Merunduk</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/judul-skripsi-jurusan-ilmu-tanah.html">Judul Skripsi Jurusan Ilmu Tanah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/contoh-psikotes-calon-direktur-bank.html">Contoh Psikotes Calon Direktur Bank</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/usaha-warga-negara-untuk-membicarakan-persoalan-politik-disebut.html">Usaha Warga Negara Untuk Membicarakan Persoalan Politik Disebut</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/sebutkan-tujuan-promosi.html">Sebutkan Tujuan Promosi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/tips-mengerjakan-soal-logika-psikotes.html">Tips Mengerjakan Soal Logika Psikotes</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/cepat-lambatnya-suatu-lagu-yang-dinyanyikan-disebut.html">Cepat Lambatnya Suatu Lagu Yang Dinyanyikan Disebut</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/soal-tkm-agama-kab-sleman-2017-2018.html">Soal Tkm Agama Kab Sleman 2017 2018</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/kisi-angket-disposisi-matematis-doc.html">Kisi Angket Disposisi Matematis Doc</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/sebutkan-3-pendekatan-geografi.html">Sebutkan 3 Pendekatan Geografi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/tes-psikotes-pt-astra-daihatsu-motor-2019.html">Tes Psikotes Pt Astra Daihatsu Motor 2019</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/contoh-soal-psikotes-krakatau-steel.html">Contoh Soal Psikotes Krakatau Steel</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/perhatikan-gambar-berikut-alat-tersebut-digunakan-untuk.html">Perhatikan Gambar Berikut Alat Tersebut Digunakan Untuk</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/soal-psikotes-pt-map.html">Soal Psikotes Pt Map</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://idwikipedia.github.io"
+                            itemprop="url">BELAJAR</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://idwikipedia.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://idwikipedia.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://idwikipedia.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://idwikipedia.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/8d/be/84/8dbe84c54b7cc5b78aa0e0a1fbdbae07.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4777688,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777688&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

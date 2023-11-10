@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jelaskan Pengertian Dan Cara Kerja Dari Distance Vector Protokol - BELAJAR</title>
+    <meta name="description" content="Jelaskan Pengertian Dan Cara Kerja Dari Distance Vector Protokol, , , , , , , 0, , , , , , 0, jelaskan-pengertian-dan-cara-kerja-dari-distance-vector-protokol, BELAJAR" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jelaskan Pengertian Dan Cara Kerja Dari Distance Vector Protokol - BELAJAR" />
+    <meta property="og:description" content="Jelaskan Pengertian Dan Cara Kerja Dari Distance Vector Protokol, , , , , , , 0, , , , , , 0, jelaskan-pengertian-dan-cara-kerja-dari-distance-vector-protokol, BELAJAR" />
+    <meta property="og:site_name" content="BELAJAR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jelaskan Pengertian Dan Cara Kerja Dari Distance Vector Protokol - BELAJAR" />
+    <meta name="twitter:description" content="Jelaskan Pengertian Dan Cara Kerja Dari Distance Vector Protokol, , , , , , , 0, , , , , , 0, jelaskan-pengertian-dan-cara-kerja-dari-distance-vector-protokol, BELAJAR" />
+    <link rel='stylesheet' id='generate-style-css' href='https://idwikipedia.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://idwikipedia.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://idwikipedia.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://idwikipedia.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://idwikipedia.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://idwikipedia.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://idwikipedia.github.io">Home</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2"><a
+                            href="https://idwikipedia.github.io/page/dmca.html">DMCA</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3"><a
+                            href="https://idwikipedia.github.io/page/privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://idwikipedia.github.io" rel="home"> BELAJAR</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Jelaskan Pengertian Dan Cara Kerja Dari Distance Vector Protokol</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">Revoo58</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Jelaskan+Pengertian+Dan+Cara+Kerja+Dari+Distance+Vector+Protokol" alt="Jelaskan Pengertian Dan Cara Kerja Dari Distance Vector Protokol">
+                    </div>
+                    <p></p>
+                    <p>jelaskan pengertian dari distance Vector?​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-dari-distance-vector%e2%80%8b">1.
+                                            jelaskan pengertian dari distance Vector?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-protokol-routing-tipe-link-state-lebih-baik-dibanding-kan-dengan-distance-vector-jelaskan">2.
+                                            Mengapa protokol routing tipe link state lebih baik dibanding kan dengan distance vector? Jelaskan</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-bedanya-protokol-routing-distance-vector-dan-link-state">3.
+                                            apa bedanya protokol routing distance vector dan link state?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-vector">4.
+                                            Jelaskan pengertian vector</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#cara-kerja-protokol-netware">5.
+                                            cara kerja protokol netware</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-side-stance-%e2%80%8b">6.
+                                            Jelaskan pengertian side stance ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#klasifikasi-routing-protokol-dibedakan-menjadi-beberapa-jenis-yang-bukan-termasuk-dari-klasifikasi-routing-protokol-adalah-a-path-vectorb-link-state-atau-shortest-path-firstc-hybridd-distance">7.
+                                            Klasifikasi routing protokol dibedakan menjadi beberapa jenis, yang bukan termasuk dari klasifikasi routing protokol adalah ....A. Path VectorB. Link State atau Shortest Path FirstC. HybridD. Distance VectorE. Multi Dimensi​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-protokol-kesehatannantidikumpulkan%e2%80%8b">8.
+                                            jelaskan pengertian "protokol kesehatan"#nantidikumpulkan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apakah-pengertian-dari-vector">9.
+                                            Apakah Pengertian dari vector??...</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-asas-keagamaan-dalam-asas-asas-keprotokolan%e2%80%8b">10.
+                                            Jelaskan pengertian asas keagamaan dalam asas-asas keprotokolan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#protokol-protokol-layer-session-dan-pengertiannya">11.
+                                            protokol protokol layer session dan pengertiannya</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-forehandbekhendstancefoot-work-dan-stro-ke-%e2%80%8b">12.
+                                            jelaskan pengertian forehand,bekhend,stance,foot work Dan stro ke ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-teks-prosedur-protokol">13.
+                                            Jelaskan pengertian teks prosedur protokol </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-cara-melakukan-stance">14.
+                                            jelaskan cara melakukan stance</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-apa-pengertian-dari-protokolberikan-5-contoh%e2%80%8b">15.
+                                            jelaskan apa pengertian dari protokol,berikan 5 contoh?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#algoritma-routing-jenis-distance-vector-adalah">16.
+                                            algoritma routing jenis distance vector adalah</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-dari-protokol-jaringan-jawabnya-yang-betul-yah%e2%80%8b">17.
+                                            Jelaskan pengertian dari protokol jaringan (jawabnya yang betul yah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-tentangprotokol-kesehatan%e2%80%8b">18.
+                                            jelaskan pengertian tentang"protokol kesehatan"!​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-dari-protokol-tcpip">19.
+                                            Jelaskan pengertian dari protokol TCP/IP! </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-square-stance-dalam-permainan-tenis-meja">20.
+                                            jelaskan pengertian square stance dalam permainan tenis meja</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-ketika-anda-membangun-jaringan-berbasis-protocol-routing-distance-vector-anda-harus-beberapa-ciri-atau-karakteristiknyan-di-antara-karakteristik-distance-vector-memahami-yang-tidak-tepat-adalah-a">21.
+                                            2. Ketika anda membangun jaringan berbasis protocol routing distance vector, anda harus beberapa ciri atau karakteristiknyan. Di antara karakteristik distance vector memahami yang tidak tepat adalah A lector C. Distance B. Classfull routing D. Classless protocol E Kurang sesuai diterapkan pada jaringan berskala besar​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pengertian-protokol-sharing-secara-singkat-dan-jelas">22.
+                                            pengertian protokol sharing secara singkat dan jelas</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#menjelaskan-protokol-protokol-yang-bekerja-pada-layanan-voip-%e2%80%8b">23.
+                                             menjelaskan protokol-protokol yang bekerja pada Layanan VoIP ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#algoritma-routing-jenis-distance-vector-adalah">24.
+                                            algoritma routing jenis distance vector adalah</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#algoritma-routing-jenis-distance-vector-adalah">25.
+                                            algoritma routing jenis distance vector adalah</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-cara-kerja-protokol-netware">26.
+                                            tuliskan cara kerja protokol netware</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#2-ketika-anda-membangun-jaringan-berbasis-protocol-routing-distance-vector-anda-harus-beberapa-ciri-atau-karakteristiknyan-di-antara-karakteristik-distance-vector-yang-tidak-tepat-adalah-memahami-c">27.
+                                            2. Ketika anda membangun jaringan berbasis protocol routing distance vector, anda harus beberapa ciri atau karakteristiknyan. Di antara karakteristik distance vector yang tidak tepat adalah memahami C. Distance D. Classless protocol A. Vector B. Classfull routing E. Kurang sesuai diterapkan pada jaringan berskala besar.​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#protokol-routing-berikut-yang-menggunakan-campuran-antara-algoritma-link-state-dan-distance-vector-adalah">28.
+                                            Protokol routing berikut yang menggunakan campuran antara algoritma link state dan distance vector adalah</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-pengertian-protokoljelaskan">29.
+                                            apa pengertian protokol,jelaskan!</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bagaimana-cara-kerja-protokol-routing-bgp">30.
+                                            bagaimana cara kerja protokol routing bgp</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-protokol-menurut-satrio-wuryanto">31.
+                                            Jelaskan pengertian protokol menurut satrio wuryanto</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pengertian-protokol-kesehatan-dan-jenis-protokol-kesehatan%e2%80%8b">32.
+                                            pengertian protokol kesehatan dan jenis protokol kesehatan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-regulasi-bidang-keprotokolan">33.
+                                            Jelaskan pengertian regulasi bidang keprotokolan</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-vector%e2%80%8b">34.
+                                            jelaskan pengertian vector​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-protokoltolong-di-bantu">35.
+                                            jelaskan pengertian protokol??
+tolong di bantu :):)</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-prinsip-kerja-protokol-imap">36.
+                                            Jelaskan prinsip kerja protokol IMAP!</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-prinsip-kerja-protokol-netware">37.
+                                            jelaskan prinsip kerja protokol netware?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-cara-melakukan-stance">38.
+                                            jelaskan cara melakukan stance</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-pengertian-side-stance-jwb-yaaa%e2%80%8b">39.
+                                            Jelaskan pengertian side stance jwb yaaa​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-fungsi-agenda-kerja-keprotokolan%e2%80%8b">40.
+                                            jelaskan fungsi agenda kerja keprotokolan?​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-dari-distance-vector%e2%80%8b">
+                            1. jelaskan pengertian dari distance Vector?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Distance Vector merupakan sebuah protokol yang menemukan jalur terbaik ke sebuah network remote dengan menilai jarak. </p><p><strong>Jawaban:</strong></p><p>Distance Vector adalah sebuah protokol yang menemukan jalan/jalur untuk ke suatu remote network remote dengan jarak tertentu.</p><p></p><p>#AyoBelajar</p><p>semoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="mengapa-protokol-routing-tipe-link-state-lebih-baik-dibanding-kan-dengan-distance-vector-jelaskan">
+                            2. Mengapa protokol routing tipe link state lebih baik dibanding kan dengan distance vector? Jelaskan</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Protokol routing tipe link state dan distance vector adalah dua pendekatan yang berbeda dalam perutean jaringan komputer. Berikut adalah beberapa alasan mengapa protokol routing tipe link state dianggap lebih baik daripada distance vector:</p><p></p><p>1. Informasi Topologi yang Lebih Akurat: Protokol routing tipe link state mempertahankan database yang lengkap tentang topologi jaringan, termasuk status dan metrik dari setiap link di jaringan. Dalam protokol distance vector, setiap router hanya memiliki informasi tentang jarak ke tujuan tertentu. Dengan informasi topologi yang lebih akurat, protokol link state dapat membuat keputusan perutean yang lebih cerdas dan memilih jalur terbaik berdasarkan kondisi aktual jaringan.</p><p></p><p>2. Konvergensi yang Lebih Cepat: Dalam protokol routing tipe link state, setiap router memiliki pemahaman yang sama tentang topologi jaringan. Ketika terjadi perubahan dalam jaringan, seperti kegagalan link atau perubahan metrik, setiap router secara langsung mendapatkan informasi tentang perubahan tersebut. Dalam protokol distance vector, diperlukan waktu yang lebih lama untuk menyebarkan informasi perubahan melalui iterasi terus-menerus antara router. Oleh karena itu, protokol link state cenderung memiliki waktu konvergensi yang lebih cepat.</p><p></p><p>3. Skalabilitas yang Lebih Baik: Protokol link state mampu mengatasi masalah skala dengan lebih baik daripada protokol distance vector. Dalam protokol link state, setiap router hanya perlu menyimpan informasi tentang tetangga langsungnya dan bukan tentang seluruh jaringan. Ini membuat protokol link state lebih efisien dalam penggunaan sumber daya dan mampu mengatasi jaringan yang lebih besar dengan jumlah router yang lebih banyak.</p><p></p><p>4. Resiliensi Terhadap Routing Loop: Protokol link state menggunakan algoritma Dijkstra untuk menghitung jalur terbaik. Algoritma ini dapat mencegah terjadinya routing loop, yaitu situasi di mana paket data terus-menerus beredar dalam loop tak terbatas antara beberapa router. Di sisi lain, protokol distance vector lebih rentan terhadap routing loop karena informasi perutean hanya diketahui secara terbatas oleh setiap router.</p><p></p><p>Meskipun protokol routing tipe link state memiliki keunggulan di atas, penting untuk mencatat bahwa setiap protokol routing memiliki kelebihan dan kelemahan tergantung pada kebutuhan dan karakteristik jaringan tertentu. Pemilihan protokol routing harus mempertimbangkan faktor-faktor seperti ukuran jaringan, kompleksitas topologi, dan persyaratan kinerja yang diinginkan.</p><p><strong>Penjelasan:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-bedanya-protokol-routing-distance-vector-dan-link-state">
+                            3. apa bedanya protokol routing distance vector dan link state?</h2><br />
+                        <p>Perbedaan protokol Routing Distance Vector dan Link State adalah sebagai berikut
+</p><p>
+</p> Berdasarkan algoritma
+<p>Distance Vector Roputing menggunakan algoritma Bellman Ford. Sedangkan Link State Routing menggunakan algoritma Dijsktra
+</p> Berdasarkan jaringan
+<p>Pada Distance Vector Routing, informasi topologi didapatkan dari point of view tetangga. Sedangkan pada Link State Routing, keseluruhan informasi didapatkan pada topologi jaringan
+</p> Berdasarkan kalkulasi path
+<p>Pada Distance Vector Routing, kalkulasi berdasarkan pada jumlah hop terkecil. Sedangkan pada Link State Routing, kalkulasi berdasarkan pada cost
+</p> Berdasarkan update
+<p>Pada Distance Vector Routing, menggunakan Full Routing Table. Sedangkan pada Link State Routing, menggunakan Link State Update
+</p> Berdasarkan frekuensi update
+<p>Pada Distance Vector Routing, update dilakukan secara periodik. Sedangkan pada Link State Routing, update dilakukan jika terdapat trigger
+</p> Berdasarkan CPU dan Memori
+<p>Pada Distance Vector Routing, CPU dan MEmori sedikit digunakan. Sedangkan pada Link State Routing, CPU dan Memori digunakan secara intensif
+</p> Berdasarkan kemudahan
+<p>Distance Vector Routing mudah dilakukan. Sedangkan pada Link State Routing, membutuhkan administrator jaringan yang ahli
+</p> Berdasarkan waktu konvergensi
+<p>Pada Distance Vector Routing, waktu konvergensi cenderung moderat. Sedangkan pada Link State Routing, waktu konvergensi cenderung cepat
+</p> Berdasarkan struktur hierarki
+<p>Distance Vector Routing memiliki struktur hierarki. Sedangkan Link State Routing tidak memiliki struktur hierarki
+</p> Berdasarkan node intermediate
+<p>Distance Vector Routing tidak memiliki node intermediate. Sedangkan Link State Routing memiliki node intermediate
+</p><p>
+</p><p>
+</p><p>
+</p><p>
+</p><p>Kelas : SMP
+</p><p>Mapel : TIK
+</p><p>Kode : 9.11.2
+</p><p>Kategori : Dasar-Dasar Sistem Jaringan Internet dan Intranet
+</p><p>Kata kunci : Distance Vector Routing, Link State Routing</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-vector">
+                            4. Jelaskan pengertian vector</h2><br />
+                        Vektor adalah gambar yang menggunakan poligon untuk membuat gambar pada komputer grafis Gambar vector adalah gambar yang menggunakan poligon untuk membuat gambar pada komputer grafis.<br />
+                                            <h2 class="ez-toc-section" id="cara-kerja-protokol-netware">
+                            5. cara kerja protokol netware</h2><br />
+                        Protokol Netware biasanya berbasis sistem operasi Novell Netware.<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-side-stance-%e2%80%8b">
+                            6. Jelaskan pengertian side stance ​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>side stance adalah Saat posisi tubuh menyamping ke kanan atau ke kiri sehingga posisi bahu lebih dekat dengan net ketika akan menyerang lawan adalah teknik side stance</p><p></p><p>semoga membantu:D</p><p></p><p><strong>Jawaban:</strong></p><p>Side stance adalah saat posisi tubuh menyamping ke kanan atau ke kiri sehingga posisi bahu lebih dekat dengan net ketika akan menyerang lawan.</p><br />
+                                            <h2 class="ez-toc-section" id="klasifikasi-routing-protokol-dibedakan-menjadi-beberapa-jenis-yang-bukan-termasuk-dari-klasifikasi-routing-protokol-adalah-a-path-vectorb-link-state-atau-shortest-path-firstc-hybridd-distance">
+                            7. Klasifikasi routing protokol dibedakan menjadi beberapa jenis, yang bukan termasuk dari klasifikasi routing protokol adalah ....A. Path VectorB. Link State atau Shortest Path FirstC. HybridD. Distance VectorE. Multi Dimensi​</h2><br />
+                        <p><strong>E. Multi Dimensi</strong></p><p></p><p>Dalam jaringan komputer, routing protokol adalah sekumpulan aturan yang mengatur bagaimana paket data di-routing atau diteruskan melalui jaringan. Routing protokol dapat diklasifikasikan ke dalam beberapa jenis, di antaranya adalah:</p>Distance Vector: routing protokol yang menggunakan tabel jarak untuk menentukan rute terbaik ke tujuan.Link State atau Shortest Path First (SPF): routing protokol yang menggunakan informasi keadaan (state) dari semua tautan (link) di jaringan untuk menentukan rute terbaik ke tujuan.Path Vector: routing protokol yang menggunakan informasi vektor jalur (path vector) untuk menentukan rute terbaik ke tujuan.Hybrid: routing protokol yang menggabungkan karakteristik dari beberapa jenis routing protokol lainnya.<p>Dari pilihan jawaban di atas, hanya pilihan <strong>E </strong>yang tidak termasuk dalam klasifikasi routing protokol, yaitu <strong>Multi Dimensi</strong></p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-protokol-kesehatannantidikumpulkan%e2%80%8b">
+                            8. jelaskan pengertian "protokol kesehatan"#nantidikumpulkan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Protokol kesehatan adalah aturan dan ketentuan yang perlu diikuti oleh segala pihak agar dapat beraktivitas secara aman pada saat pandemi COVID-19 ini. Protokol kesehatan dibentuk dengan tujuan agar masyarakat tetap dapat beraktivitas secara aman dan tidak membahayakan keamanan atau kesehatan orang lain</p><p><strong>Jawaban:</strong></p><p>protokol kesehatan adalah aturan dan ketentuan yang perlu diikuti oleh segala pihak agar dapat beraktivitas secara aman pada saat pandemi virus COVID 19 ini </p><p><strong>Penjelasan:</strong></p><p>semoga membantu, jadikan jawaban terbaik </p><br />
+                                            <h2 class="ez-toc-section" id="apakah-pengertian-dari-vector">
+                            9. Apakah Pengertian dari vector??...</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Vector adalah gambar yang terbuat dari beberapa titik dan garis (poligon), kombinasi gambar jenis ini melalui proses rumus matematika khusus dalam pembuatan gambar. Setiap alur vector dapat dengan mudah ditambah atribut untuk membuat berbagai bentuk yang diinginkan.</p><p><strong>JAWABAN</strong><strong>:</strong></p><p></p><p><strong> </strong><strong>“</strong><strong>V</strong><strong>ektor adalah suatu ruas garis berarah yang memiliki besaran (panjang, nilai) dan arah tertentu</strong><strong>.</strong><strong>”</strong></p><p></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-asas-keagamaan-dalam-asas-asas-keprotokolan%e2%80%8b">
+                            10. Jelaskan pengertian asas keagamaan dalam asas-asas keprotokolan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Dalam konteks keprotokolan, asas keagamaan merujuk pada prinsip atau nilai-nilai yang berkaitan dengan agama dalam pelaksanaan protokol atau tatacara resmi di lingkungan keagamaan. Asas keagamaan ini diterapkan untuk memastikan bahwa pelaksanaan kegiatan protokoler di wilayah keagamaan disesuaikan dengan nilai-nilai agama yang dijunjung tinggi oleh masyarakat agama tertentu.Beberapa hal yang berkaitan dengan asas keagamaan dalam asas-asas keprotokolan adalah:1. Penghargaan terhadap kepercayaan dan praktik agama: Asas keagamaan menegaskan pentingnya menghormati kepercayaan dan praktik agama yang berbeda-beda. Dalam kegiatan protokoler yang melibatkan berbagai agama, asas ini memastikan bahwa semua pihak mendapatkan perlakuan yang adil dan menghormati hak-hak agama serta kebebasan beragama.2. Penyesuaian waktu dan tempat: Asas keagamaan juga melibatkan penyesuaian waktu dan tempat dalam pelaksanaan protokol. Misalnya, dengan memperhatikan kalender agama atau hari libur keagamaan, protokol dapat diatur agar tidak bertentangan dengan kegiatan atau larangan agama tertentu. Demikian pula, tempat yang digunakan untuk kegiatan protokoler di lingkungan keagamaan haruslah mempertimbangkan kebutuhan dan aturan agama yang berlaku.3. Etika dan tata krama agama: Asas keagamaan juga mencakup penghormatan terhadap etika dan tata krama agama. Ini termasuk melibatkan pemimpin agama atau ulama dalam acara-acara resmi, mengikutsertakan upacara keagamaan atau ritual dalam protokol, atau mempertimbangkan keberagaman denominasi agama dalam acara resmi.4. Pembatasan dan ketentuan agama: Asas keagamaan juga mengakui adanya pembatasan dan ketentuan agama tertentu yang harus diperhatikan dalam protokol. Misalnya, dalam hal pakaian atau penutup kepala yang wajib, pemisahan gender dalam beberapa kegiatan, atau larangan makanan tertentu dalam proses persiapan makanan yang akan disajikan.Penerapan asas keagamaan dalam asas-asas keprotokolan penting untuk menciptakan lingkungan yang inklusif, menghormati dan mengakui perbedaan agama, dan mampu memberikan rasa nyaman serta keadilan bagi semua pihak yang terlibat dalam kegiatan protokoler di lingkungan keagamaan.</p><p><strong>Jawaban:</strong></p><p>Dalam konteks asas-asas keprotokolan, asas keagamaan merujuk pada prinsip-prinsip yang mengakui dan menghormati keberagaman agama serta memberikan perlakuan yang adil dan setara terhadap individu berdasarkan keyakinan keagamaan mereka. Asas keagamaan biasanya diterapkan dalam konteks protokol yang melibatkan pertemuan, acara resmi, atau kegiatan lain yang melibatkan orang-orang dengan latar belakang agama yang berbeda.</p><p>Beberapa prinsip asas keagamaan dalam keprotokolan antara lain:</p><p>Kebebasan beragama: Menghormati hak setiap individu untuk memeluk agama atau keyakinan apa pun dan berlatih secara bebas tanpa adanya diskriminasi atau intimidasi.</p><p>Keadilan dalam perlakuan: Memastikan bahwa setiap orang, terlepas dari agama atau keyakinan mereka, diperlakukan secara adil dan setara dalam segala aspek pembuatan keputusan atau pelaksanaan protokol.</p><p>Toleransi dan penghormatan: Menghargai perbedaan agama dan keyakinan serta memperluas pengertian dan penghargaan terhadap keberagaman tersebut.</p><p>Menjaga netralitas: Dalam beberapa situasi, terutama dalam konteks resmi atau pemerintahan, asas keprotokolan dapat mewajibkan netralitas dalam hal agama untuk memastikan bahwa tidak ada keberpihakan atau penindasan terhadap kelompok atau individu berdasarkan agama mereka.</p><p>Mengakomodasi kebutuhan agama: Mencakup tindakan atau prosedur untuk memfasilitasi praktik dan kebutuhan agama yang penting bagi individu atau kelompok dalam suatu kegiatan atau acara protokol.</p><p>Penerapan asas keagamaan dalam asas-asas keprotokolan bertujuan untuk menciptakan lingkungan yang inklusif, saling menghormati, dan memfasilitasi partisipasi seluruh individu terlepas dari latar belakang agama mereka. </p><br />
+                                            <h2 class="ez-toc-section" id="protokol-protokol-layer-session-dan-pengertiannya">
+                            11. protokol protokol layer session dan pengertiannya</h2><br />
+                        <p>maksudnya  Apa ya  ,mohon diperbaiki
+</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-forehandbekhendstancefoot-work-dan-stro-ke-%e2%80%8b">
+                            12. jelaskan pengertian forehand,bekhend,stance,foot work Dan stro ke ​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Forehand dalam tenis dan olahraga raket lainnya seperti tenis meja, squash, dan bulutangkis adalah pukulan yang dibuat dengan mengayunkan raket ke seluruh tubuh seseorang dengan tangan yang bergerak terlebih dahulu.</p><p></p><p>Backhand adalah pukulan tenis di mana seseorang mengayunkan raket ke tubuh seseorang dengan punggung tangan di depan telapak tangan. Kecuali dalam kalimat voli backhand, istilah ini merujuk pada gaya gerak. Ini kontras dengan jenis groundstroke lainnya, forehand </p><p></p><p>stance adalah pendirian/cara berdiri/sikap mental</p><p></p><p>footwork adalah teknik pengaturan langkah kaki agar menjadi lebih efektif saat bermain bulu tangkis di lapangan</p><p></p><p>maaf stro ke itu bener gak tulisannya ya?</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-teks-prosedur-protokol">
+                            13. Jelaskan pengertian teks prosedur protokol </h2><br />
+                        <p>teks prosedur protokol adalah teks yang berisi bahan bahan dan langkah langkah supaya pembca atau pendengar mudah memahami</p><br /><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-cara-melakukan-stance">
+                            14. jelaskan cara melakukan stance</h2><br />
+                        stance??? olahraga basket kan<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-apa-pengertian-dari-protokolberikan-5-contoh%e2%80%8b">
+                            15. jelaskan apa pengertian dari protokol,berikan 5 contoh?​</h2><br />
+                        <p>Secara umum, protokol adalah prosedur resmi atau sistem aturan yang mengatur urusan negara atau acara diplomatik.</p><p></p><p>5 contoh protokol:</p><p>- protokol tarawih</p><p>- protokol kesehatan</p><p>- protokol ceramah</p><p>- protokol kegiatan</p><p>- protokol internasional</p><br />
+                                            <h2 class="ez-toc-section" id="algoritma-routing-jenis-distance-vector-adalah">
+                            16. algoritma routing jenis distance vector adalah</h2><br />
+                        proses pengiriman isi routing tabel yg lengkap ke router router tetangga<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-dari-protokol-jaringan-jawabnya-yang-betul-yah%e2%80%8b">
+                            17. Jelaskan pengertian dari protokol jaringan (jawabnya yang betul yah​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Protokol jaringan komputer adalah aturan yang ada dalam sebuah jaringan komputer yang harus ditaati oleh pihak pengirim dan penerima agar dapat saling berkomunikasi dan bertukar informasi meskipun memiliki sistem yang berbeda.</p><p></p><p>semoga bisa membantu ya kk</p><p></p><p><strong>Jawaban:</strong></p>Protokol jaringan komputer adalah aturan yang ada dalam sebuah jaringan komputer yang harus ditaati oleh pihak pengirim dan penerima agar dapat saling berkomunikasi dan bertukar informasi meskipun memiliki sistem yang berbeda<p><strong>Penjelasan:</strong></p><p>semangat kak!!</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-tentangprotokol-kesehatan%e2%80%8b">
+                            18. jelaskan pengertian tentang"protokol kesehatan"!​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Protokol kesehatan adalah aturan dan ketentuan yang perlu diikuti oleh segala pihak agar dapat beraktivitas secara aman pada saat pandemi COVID-19 ini. Protokol kesehatan dibentuk dengan tujuan agar masyarakat tetap dapat beraktivitas secara aman dan tidak membahayakan keamanan atau kesehatan orang lain.</p><p></p><p>Semoga Membantu ^^</p><p></p><p><strong>Jawaban:</strong></p><p>Protokol kesehatan adalah aturan dan ketentuan yang perlu diikuti oleh segala pihak agar dapat beraktivitas secara aman.</p><p></p><p>semoga betul</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-dari-protokol-tcpip">
+                            19. Jelaskan pengertian dari protokol TCP/IP! </h2><br />
+                        protokol yang mengatur jalannya lalu-lintas data di internetprotocol tcp/ip adalah alat yg digunakan militr pada saat berperang untuk komunikasi jarak jauh <br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-square-stance-dalam-permainan-tenis-meja">
+                            20. jelaskan pengertian square stance dalam permainan tenis meja</h2><br />
+                        Square stance adalah posisi badan menghadap penuh ke meja.<br />
+                                            <h2 class="ez-toc-section" id="2-ketika-anda-membangun-jaringan-berbasis-protocol-routing-distance-vector-anda-harus-beberapa-ciri-atau-karakteristiknyan-di-antara-karakteristik-distance-vector-memahami-yang-tidak-tepat-adalah-a">
+                            21. 2. Ketika anda membangun jaringan berbasis protocol routing distance vector, anda harus beberapa ciri atau karakteristiknyan. Di antara karakteristik distance vector memahami yang tidak tepat adalah A lector C. Distance B. Classfull routing D. Classless protocol E Kurang sesuai diterapkan pada jaringan berskala besar​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Jawaban yang tidak tepat adalah B. Classfull routing.</p><p></p><p>Karakteristik dari distance vector protocol meliputi:</p><p>A. Memilih rute berdasarkan jarak terpendek dari suatu node ke node lainnya</p><p>B. Biasanya menggunakan algoritma Bellman-Ford untuk menghitung jarak terpendek</p><p>C. Node hanya dapat mengetahui jarak ke tetangganya, bukan ke seluruh jaringan</p><p>D. Tidak memperhitungkan beban jaringan atau kualitas jaringan secara rinci</p><p>E. Cocok untuk jaringan kecil dengan sedikit node, namun kurang cocok untuk jaringan berskala besar</p><p></p><p>Opsi B salah karena distance vector protocol biasanya menggunakan algoritma Bellman-Ford untuk menghitung jarak terpendek. Sedangkan classful routing dan classless protocol menunjukkan cara pembagian subnetting dalam jaringan.</p><br />
+                                            <h2 class="ez-toc-section" id="pengertian-protokol-sharing-secara-singkat-dan-jelas">
+                            22. pengertian protokol sharing secara singkat dan jelas</h2><br />
+                        protokol adalah aturan atau keamanan pada suatu hubungan jaringan, dan sharing adalah pembagian namun yang dimaksud protokol sharing adalah <strong>Aturan yang terkait dengan hubungan antar jaringan.</strong><br />
+                                            <h2 class="ez-toc-section" id="menjelaskan-protokol-protokol-yang-bekerja-pada-layanan-voip-%e2%80%8b">
+                            23.  menjelaskan protokol-protokol yang bekerja pada Layanan VoIP ​</h2><br />
+                        <p>Jawaban:</p><p>TCP (transfer control ) </p><p>IP addres (alamat IP)</p><p>UDP</p><p>OSI 7 layer</p><p>Penjelasan:</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="algoritma-routing-jenis-distance-vector-adalah">
+                            24. algoritma routing jenis distance vector adalah</h2><br />
+                        proses pengiriman isi routing tabel yg lengkap ke router router tetangga<br />
+                                            <h2 class="ez-toc-section" id="algoritma-routing-jenis-distance-vector-adalah">
+                            25. algoritma routing jenis distance vector adalah</h2><br />
+                        Algoritma routing jenis vector adalah proses pengiriman isi routing tabel yg lengkap pada router-router tetangga<br />
+                                            <h2 class="ez-toc-section" id="tuliskan-cara-kerja-protokol-netware">
+                            26. tuliskan cara kerja protokol netware</h2><br />
+                        Like TCP/IP, Novell provides a suite of protocols developed specifically for NetWare. The five main protocols used by NetWare are:Media Access Protocol.Internetwork Packet Exchange/Sequenced Packet Exchange (IPX/SPX).Routing Information Protocol (RIP).Service Advertising Protocol (SAP).NetWare Core Protocol (NCP).Because these protocols were defined well before the finalization of the OSI reference model, they do not exactly match OSI. Figure 6.5 provides mapping of the NetWare protocols to the OSI reference model. In actuality, no direct correlation to the layer boundaries of the two architectures exists. These protocols follow an enveloping pattern. More specifically, the upper-lever protocols (NCP, SAP, and RIP) are enveloped by IPX/SPX. A Media Access Protocol header and trailer then envelop IPX/SPX.cara kerjanya menggunakan protokol utama IPX/SPX..<br />semoga membantu .<br /><br />
+                                            <h2 class="ez-toc-section" id="2-ketika-anda-membangun-jaringan-berbasis-protocol-routing-distance-vector-anda-harus-beberapa-ciri-atau-karakteristiknyan-di-antara-karakteristik-distance-vector-yang-tidak-tepat-adalah-memahami-c">
+                            27. 2. Ketika anda membangun jaringan berbasis protocol routing distance vector, anda harus beberapa ciri atau karakteristiknyan. Di antara karakteristik distance vector yang tidak tepat adalah memahami C. Distance D. Classless protocol A. Vector B. Classfull routing E. Kurang sesuai diterapkan pada jaringan berskala besar.​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Jawaban yang tidak tepat dalam konteks karakteristik jaringan berbasis protocol routing distance vector adalah B. Classfull routing.</p><p></p><p>Karakteristik yang seharusnya dipahami dalam jaringan berbasis protocol routing distance vector adalah:</p><p></p><p>A. Vector: Routing distance vector menggunakan informasi vector (vektor) untuk menggambarkan jarak dan arah ke tujuan dalam jaringan. Setiap node (router) mengirimkan vektor yang berisi informasi tentang jaraknya ke tujuan yang diketahui.</p><p></p><p>C. Distance: Distance vector routing menghitung jarak ke tujuan berdasarkan metrik tertentu, seperti jumlah hop, biaya, atau delay. Informasi jarak ini digunakan untuk membuat keputusan routing.</p><p></p><p>D. Classless protocol: Distance vector routing dapat mendukung penggunaan subnetting dan VLSM (Variable Length Subnet Masking). Oleh karena itu, protokol routing distance vector tidak terbatas pada penggunaan kelas (classful), di mana subnetting tidak dapat dilakukan dengan fleksibilitas.</p><p></p><p>E. Kurang sesuai diterapkan pada jaringan berskala besar: Karakteristik ini benar. Protokol routing distance vector, seperti RIP (Routing Information Protocol), cenderung kurang efisien dan kurang cocok untuk jaringan yang sangat besar dengan banyak rute. Hal ini disebabkan oleh keterbatasan dalam propagasi informasi routing, konvergensi yang lambat, dan kemungkinan terjadinya loop routing.</p><p></p><p>Jadi, jawaban yang tidak tepat adalah B. Classfull routing.</p><br />
+                                            <h2 class="ez-toc-section" id="protokol-routing-berikut-yang-menggunakan-campuran-antara-algoritma-link-state-dan-distance-vector-adalah">
+                            28. Protokol routing berikut yang menggunakan campuran antara algoritma link state dan distance vector adalah</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>EIGRP</p><p><strong>Penjelasan:</strong></p><p>EIGRP atau Enchanced Inferior Gateway Protocol merupakan pengembangan dari IGRP masih melakukan routing berdasarkan jarak yang dihitung secara matematis. Protokol ini hanya terdapat pada router Cisco. EIGRP digunakan pada router untuk berbagi jalur dengan router lain pada sistem otonom yang sama. EIGRP hanya mengirim update incremenntal sehingga mengurangi beban kerja pada router dan jumlah data yang harus dikirimkan.</p><br />
+                                            <h2 class="ez-toc-section" id="apa-pengertian-protokoljelaskan">
+                            29. apa pengertian protokol,jelaskan!</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Protokol adalah tata cara (upacara dan sebagainya) yang secara internasional berlaku dalam hubungan diplomatik. Protokol juga berarti: peraturan upacara di istana kepala negara atau berkenaan dengan penyambutan tamu-tamu negara dan sebagainya.[1] Menurut Kementerian Sekretariat Negara Republik Indonesia, Protokol adalah serangkaian kegiatan yang berkaitan dengan aturan dalam acara kenegaraan atau acara resmi yang meliputi aturan mengenai tata tempat, tata upacara, dan tata penghormatan sebagai bentuk penghormatan kepada seseorang sesuai dengan jabatan dan/atau kedudukannya dalam negara, pemerintah, atau masyarakat.[2] </p><p><strong>Penjelasan:</strong></p><p></p><p><strong>Jawaban:</strong></p><p>Protokol adalah tata cara (upacara dan sebagainya) yang secara internasional berlaku dalam hubungan diplomatik. Protokol juga berarti: peraturan upacara di istana kepala negara atau berkenaan dengan penyambutan tamu-tamu negara dan sebagainya.[1] Menurut Kementerian Sekretariat Negara Republik Indonesia, Protokol adalah serangkaian kegiatan yang berkaitan dengan aturan dalam acara kenegaraan atau acara resmi yang meliputi aturan mengenai tata tempat, tata upacara, dan tata penghormatan sebagai bentuk penghormatan kepada seseorang sesuai dengan jabatan dan/atau kedudukannya dalam negara, pemerintah, atau masyarakat.[2] </p><p><strong>Penjelasan:</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="bagaimana-cara-kerja-protokol-routing-bgp">
+                            30. bagaimana cara kerja protokol routing bgp</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Routing protokol BGP baru dapat dikatakan bekerja pada sebuah router jika sudah terbentuk sesi komunikasi dengan router tetangganya yang juga menjalankan BGP. Sesi komunikasi ini adalah berupa komunikasi dengan protokol TCP dengan nomor port 179. Setelah terjalin komunikasi ini, maka kedua buah router BGP dapat saling bertukar informasi rute.</p><p></p><p>Untuk berhasil menjalin komunikasi dengan router tetangganya sampai dapat saling bertukar informasi routing, ada beberapa hal yang perlu diperhatikan:</p><p></p><p>1. Kedua buah router telah dikonfigurasi dengan benar dan siap menjalankan routing protokol BGP.</p><p></p><p>2. Koneksi antarkedua buah router telah terbentuk dengan baik tanpa adanya gangguan pada media koneksinya.</p><p></p><p>3. Pastikan paket-paket pesan BGP yang bertugas membentuk sesi BGP dengan router tetangganya dapat samp dengan baik ke tujuannya.</p><p></p><p>4. Pastikan kedua buah router BGP tidak melakukan pemblokiran port komunikasi TCP 179.</p><p></p><p>5. Pastikan kedua buah router tidak kehabisan resource saat sesi BGP sudah terbentuk dan berjalan.</p><p></p><p>Setelah semuanya berjalan dengan baik, maka sebuah sesi BGP dapat bekerja dengan baik pada router Anda.</p><p>Maaf kalo salah</p><p>Semoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-protokol-menurut-satrio-wuryanto">
+                            31. Jelaskan pengertian protokol menurut satrio wuryanto</h2><br />
+                        <p>Protokol <strong>adalah </strong>seperangkat aturan atau ketentuan yang mengikat perihal pelaksanaan sebuah kegiatan atau kebijakan. </p><p></p>Pembahasan<p>Pada kesempatan ini, soal meminta kita untuk menyajikan pengertian protokol menurut Satrio Wuryanto. Berikut kakak akan mencoba menjawab pertanyaan tersebut. </p><p></p><p><strong>Menurut Satrio Wuryanto, protokol dapat diartikan sebagai seseorang, baik masyarakat umum maupun pejabat negara, yang memiliki atau menjalankan tugas terkait posisi yang diembankan kepadanya yang sifatnya resmi atau dilakukan atas nama instansi atau lembaga yang diwakilinya. </strong></p><p></p>Pelajari lebih lanjut<p>Pada materi ini, kamu dapat belajar tentang protokol:</p><p>https://brainly.co.id/tugas/5916658</p><p></p>Detil jawaban<p><strong>Kelas: VII</strong></p><p><strong>Mata pelajaran: Bahasa Indonesia</strong></p><p><strong>Bab: Bab 8 - Mendeskripsikan sesuatu</strong></p><p><strong>Kode kategori: 7.1.8</strong></p><p><strong></strong></p><p><strong>Kata kunci: pengertian protokol</strong></p><br />
+                                            <h2 class="ez-toc-section" id="pengertian-protokol-kesehatan-dan-jenis-protokol-kesehatan%e2%80%8b">
+                            32. pengertian protokol kesehatan dan jenis protokol kesehatan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>kesalahan pertama yang masih sering dilakukan oleh masyarakat adalah menggunakan masker yang longgar</p><p><strong>Penjelasan:</strong></p><p>virus Corona harus segera dihentikan tak hanya menjadi tanggung jawab pemerintah masyarakat juga berperan aktif untuk menghentikan transmisi virus Corona </p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-regulasi-bidang-keprotokolan">
+                            33. Jelaskan pengertian regulasi bidang keprotokolan</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>regulasi adalah suatu peraturan yang dibuat untuk membantu mengendalikan suatu kelompok, lembaga/ organisasi, dan masyarakat demi mencapai tujuan tertentu dalam kehidupan bersama, bermasyarakat, dan bersosialisasi.</p><p></p><p><strong>Penjelasan:</strong></p><p>semoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-vector%e2%80%8b">
+                            34. jelaskan pengertian vector​</h2><br />
+                        <p><strong>Penjelasan:</strong></p><p>vektor merupakan besaran yang memiliki nilai dan arah. </p><p></p><p>semoga membantu</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-protokoltolong-di-bantu">
+                            35. jelaskan pengertian protokol??
+tolong di bantu :):)</h2><br />
+                        Protocol yaitu persetujuan tidak resmi dan pada umumnya tidak dibuat oleh kepala Negara, yang mengatur masalah-masalah tambahan seperti penafsiran klausual-klausual tertentu.etiket berdiplomasi dan urusan negara<br /><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-prinsip-kerja-protokol-imap">
+                            36. Jelaskan prinsip kerja protokol IMAP!</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>IMAP  (Internet Message Access Protocol) adalah protokol standar untuk mengakses / mengambil e-mail dari server. IMAP memungkinkan pengguna memilih pesan e-mail yang akan ia ambil, membuat folder di server, mencari pesan e-mail tertentu, bahkan menghapus pesan e-mail yang ada. Kemampuan ini jauh lebih baik daripada POP (Post Office Protocol) yang hanya memperbolehkan kita mengambil / download semua pesan yang ada tanpa kecuali. Internet Message Access Protocol merupakan salah satu dari dua protokol penerimaan email (email retrieval protocol). Juga dikenal dengan singkatan IMAP, Internet Message Access Protocol merupakan Internet protocol yang beroperasi pada Application layer. Dengan IMAP, mailbox dapat dibaca dan dikelola secara simultan (bersamaan) oleh sejumlah email client berbeda. </p><p><strong>Penjelasan:</strong></p><p><strong>Ma</strong><strong>af</strong><strong> ya</strong><strong> kalau</strong><strong> salah</strong></p><p><strong>Se</strong><strong>moga</strong><strong> membantu</strong><strong> ya</strong></p><p><strong>F</strong><strong>ollow</strong><strong> dan</strong><strong> jadikan</strong><strong> jawaban</strong><strong> yang</strong><strong> terbaik</strong><strong> ya</strong></p><p><strong>Jawaban:</strong></p><p>IMAP (Internet Message Access Protocol) adalah protokol standar untuk mengakses / mengambil e-mail dari server. IMAP memungkinkan pengguna memilih pesan e-mail yang akan ia ambil, membuat folder di server, mencari pesan e-mail tertentu, bahkan menghapus pesan e-mail yang ada. Kemampuan ini jauh lebih baik daripada POP (Post Office Protocol) yang hanya memperbolehkan kita mengambil / download semua pesan yang ada tanpa kecuali. Internet Message Access Protocol merupakan salah satu dari dua protokol penerimaan email (email retrieval protocol). Juga dikenal dengan singkatan IMAP, Internet Message Access Protocol merupakan Internet protocol yang beroperasi pada Application layer. Dengan IMAP, mailbox dapat dibaca dan dikelola secara simultan (bersamaan) oleh sejumlah email client berbeda. IMAP seringkali digunakan oleh sebagian besar pengguna Internet untuk mendownload email dari web mail server.</p><p></p><p>Awalnya disebut sebagai Interim Mail Access Protocol, versi IMAP pertama telah menjalani beberapa revisi sejak dibuat pada tahun 1986. Saat ini disebut sebagai Internet Message Access Protocol, versi IMAP ini merupakan versi IMAP keempat yang telah menjadi standar pada tahun 1994, dan dipublikasikan pada RFC 1730. Pop Office Protocol (POP) merupakan Internet protocol umum lainnya untuk email retrieval. Sebagian besar email server dan email client mendukung baik IMAP dan POP sebagai pilihan lain terhadap protokol unik mereka sendiri. Dibandingkan dengan POP, IMAP memiliki beberapa keunggulan termasuk kemampuan untuk memuat bagian dari email ketimbang menunggu semua attachment di dalamnya. IMAP juga dapat juga menerima konten pesan menggunakan mekanisme MIME. IMAP client juga cenderung tetap dapat terhubung dengan mail server dalam periode waktu yang lebih lama, yang dapat meningkatkan response time secara keseluruhan.</p><p><strong>Penjelasan:</strong></p><p>semoga bermanfaat</p><p>selamat belajar</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-prinsip-kerja-protokol-netware">
+                            37. jelaskan prinsip kerja protokol netware?</h2><br />
+                        berbaris erves,jaringan peeres<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-cara-melakukan-stance">
+                            38. jelaskan cara melakukan stance</h2><br />
+                        1. Square stance<br />Square stance adalah posisi badan menghadap penuh ke meja. Posisi ini biasa digunakan dalam permainan tenis meja untuk siap menelima bola servis atau siap kembalu setelah mengembalikan pukulan lawan.<br /><br />2. Side stance<br />Side stance adalah posisi badan menyamping, baik ke samping kiri maupun ke samping kanan pada saat bermain tenis mejaposisi badan yg menghadap ke meja<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-pengertian-side-stance-jwb-yaaa%e2%80%8b">
+                            39. Jelaskan pengertian side stance jwb yaaa​</h2><br />
+                        <strong>Jawaban:</strong><p></p><p>Jelaskan pengertian side stance <strong>Posisi</strong><strong> </strong><strong>badan</strong><strong> </strong><strong>menyamping</strong><strong>,</strong><strong> </strong><strong>baik</strong><strong> </strong><strong>ke</strong><strong> </strong><strong>sampin</strong><strong>g</strong><strong> </strong><strong>kiri</strong><strong> </strong><strong>maupun </strong><strong>kesampi</strong><strong>ng</strong><strong> </strong><strong>k</strong><strong>anan</strong></p><p></p><p>=======================================</p><p></p><p>[tex]semoga \: bisa \: membantu \: ya[/tex]</p><p>[tex]dan \: jangan \: lupa \: juga \: ya[/tex]</p><p>[tex]jadikan \: jawaban \: terbaik \: makasih[/tex]</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-fungsi-agenda-kerja-keprotokolan%e2%80%8b">
+                            40. jelaskan fungsi agenda kerja keprotokolan?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>urutan penyelenggaraan agenda kerja pimpinan terdiri dari;</p><p></p><p>1.Membuat date line and reminder, yaitu catatan pesan secara umum yang dibuat menurut bulan, tanggal dan jam, serta kegiatan yang menjadi sumber informasi untuk menyusun jadawal kerja pimpinan dan jadwal perjalanan dinas/ bisnis pimpinan. Date line and reminder diisi berdasarkan data dari buku tamu, buku janji temu, surat janji temu, dan pesan telepon yang terkait dengan kegiatan kerja pimpinan</p><p>2.Membuat  jadwal kerja pimpinan, yaitu menyusun rincian kerja kerja yang terjadwal terkait kegiatan kerja yang berlangsung di kantor dan di dalam kota sebagai pedoman pelaksanaan kegiatan kerja pimpinan agar tercipta efektifitas  penyelesaian pekerjaan manajemen. daftar ini dibuat  berdasarkan date line and reminder.</p><p>3.Membuat jadwal perjalanan dinas / bisnis, menyusun daftar kegiatan yang akan dilakukan pimpinan di luar kota, dan luar negeri. Daftar ini dibuat merupakan jabaran yang tertulis di date line and reminder yang telah disusun sebelumnya untuk digunakan bahan dasar untuk susun jadwal perjalanan dinas/ bisnis</p><p></p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/hdpnoOcrGck?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>bahasa_lain</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/soal-ujian-agama-kristen-kelas-2-sd-semester-2.html">Soal Ujian Agama Kristen Kelas 2 Sd Semester 2</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/apa-pengertian-dari-tetragonal.html">Apa Pengertian Dari Tetragonal</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/sebutkan-pekerjaan-pekerjaan-yang-menghasilkan-jasa.html">Sebutkan Pekerjaan Pekerjaan Yang Menghasilkan Jasa</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dari-celengan-hias-barang-bekas.html">Pengertian Dari Celengan Hias Barang Bekas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/contoh-soal-psikotes-untuk-masuk-smk-kehutanan.html">Contoh Soal Psikotes Untuk Masuk Smk Kehutanan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/sebutan-negara-indonesia.html">Sebutan Negara Indonesia</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/soal-psikotes-pkss.html">Soal Psikotes Pkss</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/tes-aritmatika-psikotes-dan-pembahasannya.html">Tes Aritmatika Psikotes Dan Pembahasannya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/psikotes-ppti-bca.html">Psikotes Ppti Bca</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/bedah-kisi-kisi-un-smp-ipa-indikator-2017.html">Bedah Kisi Kisi Un Smp Ipa Indikator 2017</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dari-wanprestasi.html">Pengertian Dari Wanprestasi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/carilah-pengertian-dari-wisata-budaya.html">Carilah Pengertian Dari Wisata Budaya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/jelaskan-pengertian-antropologi-dari-segi-bahasa-dan-istilah.html">Jelaskan Pengertian Antropologi Dari Segi Bahasa Dan Istilah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-delivery-order-dari-berbagai-sumber.html">Pengertian Delivery Order Dari Berbagai Sumber</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/download-soal-pretes-ppg-2018-soal-psikotes-gambar-pola.html">Download Soal Pretes Ppg 2018 Soal Psikotes Gambar Pola</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/fungsi-manajemen-yang-paling-utama-adalah.html">Fungsi Manajemen Yang Paling Utama Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/kisi-kisi-kimia-ukk-kelas-x-kurikulum-2013.html">Kisi Kisi Kimia Ukk Kelas X Kurikulum 2013</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/sebutkan-peraturan-yang-ada-di-kolam-renang.html">Sebutkan Peraturan Yang Ada Di Kolam Renang</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/soal-agama-islam-smk-kelas-x-semester2kurikulum-2013.html">Soal Agama Islam Smk Kelas X Semester2kurikulum 2013</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/gambar-psikotes-apersepsi.html">Gambar Psikotes Apersepsi</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://idwikipedia.github.io"
+                            itemprop="url">BELAJAR</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://idwikipedia.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://idwikipedia.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://idwikipedia.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://idwikipedia.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/8d/be/84/8dbe84c54b7cc5b78aa0e0a1fbdbae07.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4777688,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777688&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

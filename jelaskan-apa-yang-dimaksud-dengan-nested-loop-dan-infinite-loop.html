@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jelaskan Apa Yang Dimaksud Dengan Nested Loop Dan Infinite Loop - BELAJAR</title>
+    <meta name="description" content="Jelaskan Apa Yang Dimaksud Dengan Nested Loop Dan Infinite Loop, , , , , , , 0, , , , , , 0, jelaskan-apa-yang-dimaksud-dengan-nested-loop-dan-infinite-loop, BELAJAR" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jelaskan Apa Yang Dimaksud Dengan Nested Loop Dan Infinite Loop - BELAJAR" />
+    <meta property="og:description" content="Jelaskan Apa Yang Dimaksud Dengan Nested Loop Dan Infinite Loop, , , , , , , 0, , , , , , 0, jelaskan-apa-yang-dimaksud-dengan-nested-loop-dan-infinite-loop, BELAJAR" />
+    <meta property="og:site_name" content="BELAJAR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jelaskan Apa Yang Dimaksud Dengan Nested Loop Dan Infinite Loop - BELAJAR" />
+    <meta name="twitter:description" content="Jelaskan Apa Yang Dimaksud Dengan Nested Loop Dan Infinite Loop, , , , , , , 0, , , , , , 0, jelaskan-apa-yang-dimaksud-dengan-nested-loop-dan-infinite-loop, BELAJAR" />
+    <link rel='stylesheet' id='generate-style-css' href='https://idwikipedia.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://idwikipedia.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://idwikipedia.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://idwikipedia.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://idwikipedia.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://idwikipedia.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://idwikipedia.github.io">Home</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2"><a
+                            href="https://idwikipedia.github.io/page/dmca.html">DMCA</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3"><a
+                            href="https://idwikipedia.github.io/page/privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://idwikipedia.github.io" rel="home"> BELAJAR</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Jelaskan Apa Yang Dimaksud Dengan Nested Loop Dan Infinite Loop</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">juju223</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Jelaskan+Apa+Yang+Dimaksud+Dengan+Nested+Loop+Dan+Infinite+Loop" alt="Jelaskan Apa Yang Dimaksud Dengan Nested Loop Dan Infinite Loop">
+                    </div>
+                    <p></p>
+                    <p>sebutkan bentuk umum dari nested for loop , nested while loop dan nested do while​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-bentuk-umum-dari-nested-for-loop-nested-while-loop-dan-nested-do-while%e2%80%8b">1.
+                                            sebutkan bentuk umum dari nested for loop , nested while loop dan nested do while​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#definisi-lengkap-dari-nested-loop-adalah">2.
+                                            Definisi lengkap dari nested loop adalah</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-dibutuhkan-infinite-loop-dalam-sistem-embedded%e2%80%8b">3.
+                                            mengapa dibutuhkan infinite loop dalam sistem embedded​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-dibutuhkan-infinite-loop-dalam-sistem-embedded%e2%80%8b">4.
+                                            mengapa dibutuhkan infinite loop dalam sistem embedded​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#yang-dimaksud-dengan-open-loop-control-system-adalah-%e2%80%8b">5.
+                                            Yang dimaksud dengan Open Loop Control System adalah ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-dibutuhkan-infinite-loop-dalam-sistem-embeddedpliss-jwb-jgn-asal-pliss-mohon-sangat-jgn-asal-nggihmksh-bngt%e2%80%8b">6.
+                                            Mengapa dibutuhkan Infinite Loop dalam sistem embedded?pliss jwb jgn asal pliss mohon sangat jgn asal nggih:)mksh bngt:)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-di-maksud-loop">7.
+                                            apa yang di maksud loop</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-apa-yang-dimaksud-dengan-edge-loop-dalam-pemodelan-3d-dan-mengapa-itu-penting">8.
+                                            Jelaskan apa yang dimaksud dengan edge loop dalam pemodelan 3D dan mengapa itu penting?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-loop">9.
+                                            apa yang dimaksud dengan loop</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-loop">10.
+                                            apa yang dimaksud dengan loop?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-loop-continuously-until-esc">11.
+                                            Apa yang dimaksud dengan loop continuously until esc ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-tentang-loop-henle-dan-glomerlus%e2%80%8b">12.
+                                            jelaskan tentang loop henle dan glomerlus​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-routing-loop-dan-dana-apa-saja-yang-menyebabkan-routing-loop">13.
+                                            Apa yang dimaksud dengan routing loop? dan dana apa saja yang menyebabkan routing loop</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-loop">14.
+                                            apa yang dimaksud dengan loop?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-kontrol-loop-terbuka-dan-loop-tertutup">15.
+                                            apa yang dimaksud kontrol loop terbuka dan loop tertutup?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-pada-nested-loop-for-next-perulangan-di-dalam-perulangan-looping-yang-didalam-akan-lebih-banyak-dilakukan-perulangan-dibandingkan-yang-di-luar">16.
+                                            mengapa pada nested loop FOR- NEXT (perulangan di dalam perulangan) looping yang didalam akan lebih banyak dilakukan perulangan dibandingkan yang di luar ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-loop-control-variable%e2%80%8b">17.
+                                            apa yang dimaksud loop control variable?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#perbedaan-open-loop-dan-close-loop">18.
+                                            Perbedaan open loop dan close loop?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-routing-loop-dana-apa-saja-yang-menyebabkan-routing-loop">19.
+                                            Apa yang dimaksud dengan ROUTING LOOP , dana apa saja yang menyebabkan ROUTING LOOP</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-kontrol-loop-terbuka-dan-loop-tertutup">20.
+                                            apa yang dimaksud kontrol loop terbuka dan loop tertutup?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mohon-bantuan-nya-plis-%e2%95%a5_%e2%95%a51-tuliskan-bentuk-umum-dari-array-satu-dimensi-nested-for-loop-nested-while-loop-do-while-loop-2-gambarkan-diagram-alir-untuk-continue-statement-3">21.
+                                            Mohon bantuan nya plis (╥_╥)1. Tuliskan bentuk umum dari Array Satu Dimensi, Nested For Loop, Nested While Loop, Do... While Loop ?2. Gambarkan diagram alir untuk Continue Statement ?3. Tuliskan dan jelaskan pengertian Bahasa Pemprograman ?4. Tuliskan dan jelaskan minimal 5 Perangkat Lunak Bahasa Pemprograman ?5. Tuliskan Langkah-langkah Membuat File editor baru, Menyimpan File, dan Membuka File yang pernah tersimpan pada aplikasi Dev C++ ?6. Tuliskan minimal 5 jenis Bahasa Pemprograman ?7. Tuliskan Langkah-langkah Mengcompile dan Menjalankan program (RUN) ?8. Tuliskan jenis-jenis Loop pada Bahasa pemprograman C++ ?9. Tuliskan apa yang dimaksud dengan Perulangan ?10. Tuliskan apa yang dimaksud dengan For Loop ?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#dengan-menggunakan-pernyataan-nested-loop-buat-program-dengan-output-0-1-3-6-10">22.
+                                            Dengan menggunakan pernyataan nested loop buat program dengan output 0 1 3 6 10</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apakah-yang-dimaksud-sistem-pengendali-loop-terbuka%e2%80%8b">23.
+                                            Apakah yang dimaksud sistem pengendali Loop terbuka​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tulislah-program-dengan-bahasa-c-yang-dapat-menampilkan-output-sebagai-berikut-dengan-menggunakan-konsep-nested-loop">24.
+                                            Tulislah program dengan bahasa C++ yang dapat menampilkan output sebagai berikut dengan menggunakan konsep Nested Loop:</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-apa-yang-dimaksud-dengan-sistem-kontrol-2-apa-fungsi-dari-sistem-kontrol-otomatis-3-jelaskan-apa-yang-dimaksud-dengan%c2%a0open-loop-loop-terbuka-%c2%a0dan%c2%a0close-loop-loop-tertutup">25.
+                                            1. Apa yang dimaksud dengan Sistem Kontrol !2. Apa Fungsi dari sistem kontrol otomatis !3. Jelaskan apa yang dimaksud dengan Open Loop ( loop terbuka ) dan Close loop ( Loop tertutup) !4. Bagaimana cara kerja kontrol proses !5. Jelaskan apa yang dimaksud Robotika !tolong dijawab ya kaka​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#9-variabel-untuk-mengontrol-perulangan-disebut-juga-dengan-istilah-a-loop-control-variable-b-loop-controller-c-loop-variable-d-loop-control-variation%e2%80%8b">26.
+                                            9. Variabel untuk mengontrol perulangan disebut juga dengan istilah .... a. loop control variable b. loop controller C. loop variable d. loop control variation​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#yang-di-maksud-dengan-perulangan-do-loop">27.
+                                            Yang di maksud dengan perulangan Do-Loop</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#digunakan-untuk-melakukan-perulangan-terus-menerus-selama-kondisi-memenuhi-syarat-bernilai-true-adalah-penjelasan-dari-a-do-until-loopb-do-loop-untilc-do-while-loopd-do-loop-while-e-do-wh">28.
+                                            . Digunakan untuk melakukan perulangan terus menerus selama kondisi memenuhi syarat (bernilai true). Adalah penjelasan dari ...a. Do until loopb. Do loop untilc. Do while loopd. Do loop while e. Do while until loop​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-di-maksud-dengan-loop-control-statement-jelaskan%e2%80%8b">29.
+                                            apa yang di maksud dengan  loop control statement? jelaskan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apakah-yang-dimaksud-dengan-rangkaian-loop-tertutup">30.
+                                            Apakah yang dimaksud dengan rangkaian loop tertutup?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-10-macam-perbedaan-open-loop-dan-close-loop">31.
+                                            Jelaskan 10 macam perbedaan open loop dan close loop?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-perbedaan-slow-forehand-loop-dengan-fast-forhand-loop">32.
+                                            apa perbedaan slow forehand loop dengan fast forhand loop</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-loop-pada-rangkaian-listrik">33.
+                                            Apa yang dimaksud dengan loop pada rangkaian listrik</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-dibutuhkan-infinite-loop-dalam-sistem-embeddedplease-jwb-lh-tp-yg-bnr-jgn-asal-ya%e2%80%8b">34.
+                                            Mengapa dibutuhkan infinite loop dalam sistem embedded?:)please jwb lh tp yg bnr jgn asal ya:)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apakah-yang-dimaksud-dengan-local-loop%e2%80%8b">35.
+                                            Apakah yang dimaksud dengan local loop?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#dalam-hukum-kirchoff-yang-di-maksud-loop-adalah">36.
+                                            Dalam hukum kirchoff yang di maksud loop adalah</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#dengan-menggunakan-pernyataan-nested-loop-buatlah-program-berikut">37.
+                                            Dengan menggunakan pernyataan nested loop , buatlah program berikut</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-arus-loop">38.
+                                            apa yang dimaksud dengan arus loop? </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-menurut-pendapat-anda-mengapa-pada-nested-loop-for-next-perulangan-di-dalam-perulangan-looping-yang-didalam-akan-lebih-banyak-dilakukan-perulangan-dibandingkan-yang-di-luar-mohon-bantuan">39.
+                                            Jelaskan menurut pendapat anda, mengapa pada nested loop FOR- NEXT (perulangan di dalam perulangan) looping yang didalam akan lebih banyak dilakukan perulangan dibandingkan yang di luar 
+mohon bantuannya </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-void-setup-dan-void-loop%e2%80%8b">40.
+                                            apa yang dimaksud dengan void setup dan void loop​</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="sebutkan-bentuk-umum-dari-nested-for-loop-nested-while-loop-dan-nested-do-while%e2%80%8b">
+                            1. sebutkan bentuk umum dari nested for loop , nested while loop dan nested do while​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>ironmenrusugdfgbvghikjnbb</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="definisi-lengkap-dari-nested-loop-adalah">
+                            2. Definisi lengkap dari nested loop adalah</h2><br />
+                        merupakan perulangan bersarang (Nested Loop) yang biasanya digunakan pada pemrograman dan komputasi <br />
+                                            <h2 class="ez-toc-section" id="mengapa-dibutuhkan-infinite-loop-dalam-sistem-embedded%e2%80%8b">
+                            3. mengapa dibutuhkan infinite loop dalam sistem embedded​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Karena embedded system harus terus berjalan.</p><p><strong>Penjelasan:</strong></p><p>Gini, aplikasi dirancang untuk melakukan suatu tugas tertentu, setelah tugas itu selesai, maka aplikasi secara otomatis akan mati.</p><p></p><p>Namun, embedded system biasanya bertugas untuk selalu aktif dan siap bekerja sewaktu2 ada input / perintah, disinilah digunakan infinite loop untuk menghindari sistem shut down / mati. Misalnya saja pengecek suhu badan (yg biasa dipakai di mall2 sekarang2 ini), sistem akan terus bekerja dalam keadaan standby, hingga petugas menekan pelatuk dan sistem akan langsung mengukur suhu, lalu menampilkannya pada layar termometer.</p><p></p><p><strong>Jawaban:</strong></p><p>Karna embedded system harus berjalan terus</p><p><strong>Penjelasan:</strong></p><p>Jadi gini, aplikasi dirancang untuk melakukan suatu tugas tertentu setelah tugas biru selesai, maka aplikasi secara otomatis akan mati </p><p></p><p>Maap klo salah</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="mengapa-dibutuhkan-infinite-loop-dalam-sistem-embedded%e2%80%8b">
+                            4. mengapa dibutuhkan infinite loop dalam sistem embedded​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Karena sistem yang tertanam harus terus berjalan.  Dalam hal ini, aplikasi dirancang untuk melakukan tugas tertentu, setelah tugas tersebut selesai, aplikasi akan mati secara otomatis.  Namun embedded system biasanya bertugas untuk selalu aktif dan siap bekerja ketika ada input / perintah, disinilah infinite loop digunakan untuk menghindari system shut down / shut down.  Misalnya alat pemeriksa suhu tubuh (yang biasa digunakan di mall2 sekarang ini), sistem akan terus bekerja dalam keadaan standby, hingga petugas menekan pelatuk dan sistem akan langsung mengukur suhu, kemudian menampilkannya di layar termometer.</p><br />
+                                            <h2 class="ez-toc-section" id="yang-dimaksud-dengan-open-loop-control-system-adalah-%e2%80%8b">
+                            5. Yang dimaksud dengan Open Loop Control System adalah ​</h2><br />
+                        <p><strong>Jawaban: Apa itu Sistem Control Open Loop? Open Loop atau bisa disebut dengan Kontrol Lup adalah dimana di sistem kelauaranya tidak memberikan feedback atau kondisi kembali.</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="mengapa-dibutuhkan-infinite-loop-dalam-sistem-embeddedpliss-jwb-jgn-asal-pliss-mohon-sangat-jgn-asal-nggihmksh-bngt%e2%80%8b">
+                            6. Mengapa dibutuhkan Infinite Loop dalam sistem embedded?pliss jwb jgn asal pliss mohon sangat jgn asal nggih:)mksh bngt:)​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Karena embedded system harus terus berjalan.</p><p></p><p><strong>Penjelasan:</strong></p><p>Gini, aplikasi dirancang untuk melakukan suatu tugas tertentu, setelah tugas itu selesai, maka aplikasi secara otomatis akan mati. </p><p></p><p>Namun, embedded system biasanya bertugas untuk selalu aktif dan siap bekerja sewaktu2 ada input / perintah, disinilah digunakan infinite loop untuk menghindari sistem shut down / mati. Misalnya saja pengecek suhu badan (yg biasa dipakai di mall2 sekarang2 ini), sistem akan terus bekerja dalam keadaan standby, hingga petugas menekan pelatuk dan sistem akan langsung mengukur suhu, lalu menampilkannya pada layar termometer.</p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-di-maksud-loop">
+                            7. apa yang di maksud loop</h2><br />
+                        suatu rangkaian tertutuploop adalah lompatan di sepeda bmx<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-apa-yang-dimaksud-dengan-edge-loop-dalam-pemodelan-3d-dan-mengapa-itu-penting">
+                            8. Jelaskan apa yang dimaksud dengan edge loop dalam pemodelan 3D dan mengapa itu penting?</h2><br />
+                        <p><strong>Jawaban:Edge loop dalam pemodelan 3D adalah serangkaian edge atau garis yang membentuk sebuah loop atau lingkaran pada sebuah model 3D. Edge loop biasanya terdiri dari serangkaian edge yang terhubung secara berurutan dan membentuk poligon dengan jumlah sisi yang sama.</strong></p><p><strong></strong></p><p><strong>Edge loop sangat penting dalam pemodelan 3D karena membantu mempertahankan topologi atau struktur model yang baik dan memudahkan proses animasi dan rigging pada model tersebut. Dengan menggunakan edge loop yang tepat, kita dapat menciptakan model yang lebih realistis dan halus dengan mudah.</strong></p><p><strong></strong></p><p><strong>Edge loop juga dapat memudahkan proses subdivisi atau penghalusan model. Dalam subdivisi, model 3D dipermudah atau dihaluskan dengan menambahkan lebih banyak titik atau vertex. Edge loop yang bagus dapat memungkinkan subdivisi yang lebih halus dan lebih baik tanpa membuat poligon menjadi tidak teratur atau terlalu banyak.</strong></p><p><strong></strong></p><p><strong>Selain itu, edge loop juga dapat memudahkan proses texturing atau pemberian tekstur pada model 3D. Dengan edge loop yang baik, kita dapat menentukan dengan mudah bagian mana dari model yang harus diberi tekstur dan bagian mana yang tidak.</strong></p><p><strong></strong></p><p><strong>Secara keseluruhan, edge loop sangat penting dalam pemodelan 3D karena membantu mempertahankan topologi model yang baik, memudahkan proses animasi dan rigging, mempermudah proses subdivisi, dan memudahkan proses texturing.</strong></p><p><strong></strong></p><p></p><p><strong></strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-loop">
+                            9. apa yang dimaksud dengan loop</h2><br />
+                        Dalam hukum kirchhoff, loop yang dimaksud adalah suatu rangkaian tertutup.
+Dengan kata lain, istilah “loop tertutup” berarti menggunakan aksi umpan balik untuk memperkecil kesalahan sistem.<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-loop">
+                            10. apa yang dimaksud dengan loop?</h2><br />
+                        Dalam bahasa pemrograman, pengertian loop dapat dipandang dari 2 aspek. Pengertian pertama loop adalah sebuah kelompok ataublok instruksi yang dapat dilaksanakan secara berulang-ulang. pengertian kedua loop adalah proses yang dilaksanakan secara berulang-ulang yang biasa disebut looping.<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-loop-continuously-until-esc">
+                            11. Apa yang dimaksud dengan loop continuously until esc ?</h2><br />
+                        Melakukan perintah pengulangan secara terus menerus dan berhenti saat ditekan tombol esc pada keyboard.<br /><br /># semoga membantu<br /><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-tentang-loop-henle-dan-glomerlus%e2%80%8b">
+                            12. jelaskan tentang loop henle dan glomerlus​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>lengkung henle = adalah bagian yang berbentuk U dalam nefron ginjal menghubungkan antara tk proksimal dan tkdistal. Lengkung henle<strong> berfungsi untuk agar merubah cairan di medula ginjal menjadi asam</strong> karena lengkung henle mempunyai kadar NaCl dengan konsentrasi tinggi</p><p>glomelurus = Proses pembentukan urine dimulai dari glomerulus, yang <strong>berfungsi sebagai filtrasi atau menyaring</strong> air,garam,asam amino, urea,glukosa dan zal lainnya  dari aliran darah.(tempat menghasilkan urin primer).</p><p></p><p></p><p><strong>Penjelasan:</strong></p><p></p><p>Loop henle:Bagian yg berbentuk U dalam nefron ginjal menghubungkan antara tk proksimal dan tk distal.</p><p>Glomerlus:Proses pembentukan urin di mulai dari glomerlus.</p><p></p><p></p><p></p><p>Smg mmbntu...Bantu fllw aku y!!</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-routing-loop-dan-dana-apa-saja-yang-menyebabkan-routing-loop">
+                            13. Apa yang dimaksud dengan routing loop? dan dana apa saja yang menyebabkan routing loop</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Rooting Loop Adalah kondisi di mana sebuah paket terus ditransmisikan dalam serangkaian router dan tidak pernah mencapai jaringan tujuan yang dimaksudkan.</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-loop">
+                            14. apa yang dimaksud dengan loop?</h2><br />
+                        Dalam hukum kirchhoff, loop yang dimaksud adalah suatu rangkaian tertutup.<br />menurut hukum kirchoff artinya rangkaian tertutup<br /><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-kontrol-loop-terbuka-dan-loop-tertutup">
+                            15. apa yang dimaksud kontrol loop terbuka dan loop tertutup?</h2><br />
+                         Sistem Kontrol Loop Terbuka (Open-Loop Control System)
+
+
+<br />
+
+
+    Suatu sistem kontrol yang 
+mempunyai karakteristik dimana nilai keluaran tidak memberikan pengaruh 
+pada aksi kontrol disebut Sistem Kontrol Loop Terbuka (Open-Loop Control
+ System). Contoh dari sistem loop terbuka adalah operasi mesin cuci. 
+Penggilingan pakaian, pemberian sabun, dan pengeringan yang bekerja 
+sebagai operasi mesin cuci tidak akan berubah (hanya sesuai dengan yang 
+diinginkan seperti semula) walaupun tingkat kebersihan pakaian (sebagai 
+keluaran sistem) kurang baik akibat adanya faktor-faktor yang 
+kemungkinan tidak diprediksikan sebelumnya.<br />Sistem Kontrol Loop Tertutup (Closed-Loop Control System)<br />*Sistem kontrol loop tertutup adalah
+ identik dengan sistem kontrol umpan balik, dimana nilai dari keluaran 
+akan ikut mempengaruhi pada aksi kontrolnya.<br /><br /><br />
+                                            <h2 class="ez-toc-section" id="mengapa-pada-nested-loop-for-next-perulangan-di-dalam-perulangan-looping-yang-didalam-akan-lebih-banyak-dilakukan-perulangan-dibandingkan-yang-di-luar">
+                            16. mengapa pada nested loop FOR- NEXT (perulangan di dalam perulangan) looping yang didalam akan lebih banyak dilakukan perulangan dibandingkan yang di luar ?</h2><br />
+                        <p>Nested Loop atau perulangan bersarang adalah sebuah perulangan yang terdapat di dalam perulangan. Bentuk nested loop for sendiri kurang lebih adalah seperti berikut</p><p> For i = 1 To 5</p><p>          For j = 1 To 5         </p><br /><p>          Next</p><p> Next</p><p>For-Next di dalam akan memiliki lebih banyak perulangan karena perulangan di dalam akan diulang sebanyak jumlah perulangan yang ada di luar.</p><p>Sebagai contoh potongan kode di atas For-Next di luar hanya diulang sebanyak 5 kali sedangkan, For-Next di dalam akan diulang setiap kali perulangan di luar dilakukan sehingga terjadi 25 kali perulangan. </p><p>Jadi pada saat i = 1 terjadi 5 kali perulangan di For-Next dalam, kemudian i =2 terjadi 5 kali perulangan, begitu seterusnya hingga terjadi 5x5 perulangan untuk perulangan For-Next yang di dalam.</p><br /><p><strong>Detail jawaban</strong></p><p>Kelas:  10</p><p>Mapel: TIK</p><p>Bab:  Mengenal Pemrograman Komputer</p><p>Kode:  10.11.06</p><br /><p><strong>Kata Kunci</strong>:  perulangan bersarang, nested loop</p><br /><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-loop-control-variable%e2%80%8b">
+                            17. apa yang dimaksud loop control variable?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>sebuah loop control atau control lup terbuka adalah suatu sistem yang keluaranya</p><p> memiliki pengaruh terhadap aksi control</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="perbedaan-open-loop-dan-close-loop">
+                            18. Perbedaan open loop dan close loop?</h2><br />
+                        <p>Jawaban:</p><p>Openloop adalah tidak bisa diatur tekanan anginnya, sedangkan closeloop adalah tekanan angin bisa diatur sesuai dengan keinginan.</p><p>Jawaban:</p><p>Kompressor open loop adalah tekanan angin yang tidak bisa diatur sedangkan kompressor close loop adalah sebaliknya.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-routing-loop-dana-apa-saja-yang-menyebabkan-routing-loop">
+                            19. Apa yang dimaksud dengan ROUTING LOOP , dana apa saja yang menyebabkan ROUTING LOOP</h2><br />
+                        <p>tu di ada di atasᥬ᭄ ᥬ᭄ ᥬ᭄     ........</p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-kontrol-loop-terbuka-dan-loop-tertutup">
+                            20. apa yang dimaksud kontrol loop terbuka dan loop tertutup?</h2><br />
+                         Sistem Kontrol Loop Terbuka (Open-Loop Control System)
+
+
+<br />
+
+
+    Suatu sistem kontrol yang 
+mempunyai karakteristik dimana nilai keluaran tidak memberikan pengaruh 
+pada aksi kontrol disebut Sistem Kontrol Loop Terbuka (Open-Loop Control
+ System). Contoh dari sistem loop terbuka adalah operasi mesin cuci. 
+Penggilingan pakaian, pemberian sabun, dan pengeringan yang bekerja 
+sebagai operasi mesin cuci tidak akan berubah (hanya sesuai dengan yang 
+diinginkan seperti semula) walaupun tingkat kebersihan pakaian (sebagai 
+keluaran sistem) kurang baik akibat adanya faktor-faktor yang 
+kemungkinan tidak diprediksikan sebelumnya.<br />Sistem Kontrol Loop Tertutup (Closed-Loop Control System)<br />*Sistem kontrol loop tertutup adalah
+ identik dengan sistem kontrol umpan balik, dimana nilai dari keluaran 
+akan ikut mempengaruhi pada aksi kontrolnya.<br /><br /><br />loop tertutup: sinyal keluarnjya mempunyai pengaruh langsung terhadap aksi keluarnya<br />loop terbuka:sinyal keluarnya tidak terpengaruh langsung terhadap aksi keluarnya<br /><br />
+                                            <h2 class="ez-toc-section" id="mohon-bantuan-nya-plis-%e2%95%a5_%e2%95%a51-tuliskan-bentuk-umum-dari-array-satu-dimensi-nested-for-loop-nested-while-loop-do-while-loop-2-gambarkan-diagram-alir-untuk-continue-statement-3">
+                            21. Mohon bantuan nya plis (╥_╥)1. Tuliskan bentuk umum dari Array Satu Dimensi, Nested For Loop, Nested While Loop, Do... While Loop ?2. Gambarkan diagram alir untuk Continue Statement ?3. Tuliskan dan jelaskan pengertian Bahasa Pemprograman ?4. Tuliskan dan jelaskan minimal 5 Perangkat Lunak Bahasa Pemprograman ?5. Tuliskan Langkah-langkah Membuat File editor baru, Menyimpan File, dan Membuka File yang pernah tersimpan pada aplikasi Dev C++ ?6. Tuliskan minimal 5 jenis Bahasa Pemprograman ?7. Tuliskan Langkah-langkah Mengcompile dan Menjalankan program (RUN) ?8. Tuliskan jenis-jenis Loop pada Bahasa pemprograman C++ ?9. Tuliskan apa yang dimaksud dengan Perulangan ?10. Tuliskan apa yang dimaksud dengan For Loop ?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>3. Bahasa pemrograman adalah kumpulan sintaks yang berfungsi untuk memerintahkan perangkat lunak pada komputer. Secara singkat, bahasa ini dipakai untuk membuat program komputer menggunakan aturan logika komputer.</p><p>4.Notepad ++,Visual Basic,Dev c++,netbeans,freepascal/turbopascal</p><p>6.Java,C ++,C,Python,PHP</p><p>8.For,While ,Do - While</p><p>9.Perulangan adalah suatu proses eksekusi statemen-statemen dalam sebuah program secara terus-menerus sampai terdapat kondisi untuk menghentikannya. .</p><p>10.Struktur perulangan for biasa digunakan untuk mengulang suatu proses yang telah diketahui jumlah perulangannya.</p><p><strong>Penjelasan:</strong></p><p>maaf hanya itu yang saya tahu</p><br />
+                                            <h2 class="ez-toc-section" id="dengan-menggunakan-pernyataan-nested-loop-buat-program-dengan-output-0-1-3-6-10">
+                            22. Dengan menggunakan pernyataan nested loop buat program dengan output 0 1 3 6 10</h2><br />
+                        for(int i=0; i&lt;=1; i++)<br />{<br /> for(int j=0; j&lt;=3; j++)<br /> {<br />  i += j + 1;<br />  System.out.print(i+" ");<br />  }<br />}<br />Versi <strong>Java</strong><br />
+                                            <h2 class="ez-toc-section" id="apakah-yang-dimaksud-sistem-pengendali-loop-terbuka%e2%80%8b">
+                            23. Apakah yang dimaksud sistem pengendali Loop terbuka​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Sistem kendali Loop Terbuka adalah Ssitem Kendali yang kinerjanya tidak berpengaruh terhadap keluarannya atau tidak berpengaruh terhadap umpan balik dari prosesnya. Sistem Kendali Loop Terbuka Menggunakan peralatan penggerak untuk mengontrol proses secara langsung.</p><p></p><p>#semoga membantu#</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tulislah-program-dengan-bahasa-c-yang-dapat-menampilkan-output-sebagai-berikut-dengan-menggunakan-konsep-nested-loop">
+                            24. Tulislah program dengan bahasa C++ yang dapat menampilkan output sebagai berikut dengan menggunakan konsep Nested Loop:</h2><br />
+                        <p>Link untuk sourcenya:</p><p>https://pastebin.com/FTeQQ7Ny</p><p></p><p><strong>Jangan lupa untuk mengganti NIM_Nama!</strong></p><p><strong>Semoga Membantu!</strong></p><br />
+                                            <h2 class="ez-toc-section" id="1-apa-yang-dimaksud-dengan-sistem-kontrol-2-apa-fungsi-dari-sistem-kontrol-otomatis-3-jelaskan-apa-yang-dimaksud-dengan%c2%a0open-loop-loop-terbuka-%c2%a0dan%c2%a0close-loop-loop-tertutup">
+                            25. 1. Apa yang dimaksud dengan Sistem Kontrol !2. Apa Fungsi dari sistem kontrol otomatis !3. Jelaskan apa yang dimaksud dengan Open Loop ( loop terbuka ) dan Close loop ( Loop tertutup) !4. Bagaimana cara kerja kontrol proses !5. Jelaskan apa yang dimaksud Robotika !tolong dijawab ya kaka​</h2><br />
+                        <p>1.suatu alat untuk mengendalikan memerintah dan mengatur keadaan dalam 1 sistem</p><p></p><p>2.menjaga keluaran sebenarnya berada pada nilai yg di kedendaki dengan adanya gangguan </p><p></p><p></p><p></p><p>    MAAF CMA SEGITU CAPEK NGETIK</p><br />
+                                            <h2 class="ez-toc-section" id="9-variabel-untuk-mengontrol-perulangan-disebut-juga-dengan-istilah-a-loop-control-variable-b-loop-controller-c-loop-variable-d-loop-control-variation%e2%80%8b">
+                            26. 9. Variabel untuk mengontrol perulangan disebut juga dengan istilah .... a. loop control variable b. loop controller C. loop variable d. loop control variation​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>A. loop control variable</p><p><strong>Penjelasan:</strong></p><p>[tex]maaf \: jika \: salah[/tex]</p><p>[tex]semoga \: membantu[/tex]</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="yang-di-maksud-dengan-perulangan-do-loop">
+                            27. Yang di maksud dengan perulangan Do-Loop</h2><br />
+                        Perulangan yang minimal dijalankan sekali baru dilakukan pengecekan kondisi pada while.<br />
+                                            <h2 class="ez-toc-section" id="digunakan-untuk-melakukan-perulangan-terus-menerus-selama-kondisi-memenuhi-syarat-bernilai-true-adalah-penjelasan-dari-a-do-until-loopb-do-loop-untilc-do-while-loopd-do-loop-while-e-do-wh">
+                            28. . Digunakan untuk melakukan perulangan terus menerus selama kondisi memenuhi syarat (bernilai true). Adalah penjelasan dari ...a. Do until loopb. Do loop untilc. Do while loopd. Do loop while e. Do while until loop​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>B</p><p><strong>Penjelasan:</strong></p><p><strong>Contoh</strong></p><p>Do, Melakukan Makan Nasi</p><p>Loop, Sampai </p><p>Until, Nasi habis, Kenyang</p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-di-maksud-dengan-loop-control-statement-jelaskan%e2%80%8b">
+                            29. apa yang di maksud dengan  loop control statement? jelaskan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Loop control statement adalah statement yg digunakan untuk mengarahkan jalannya program sehingga urutan pengerjaan program dpt melompat lompat/berulang</p><p></p><p><strong>Penjelasan:</strong></p><p>maaf klo slh</p><br />
+                                            <h2 class="ez-toc-section" id="apakah-yang-dimaksud-dengan-rangkaian-loop-tertutup">
+                            30. Apakah yang dimaksud dengan rangkaian loop tertutup?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>loop tertutup merupakan sistem pengendalian dimana sinyal keluaran mempunyai pengaruh langsung terhadap sinyal kontrol (aksi kontrol)</p><p><strong>Penjelasan:</strong></p><p>maaf kalau salah</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-10-macam-perbedaan-open-loop-dan-close-loop">
+                            31. Jelaskan 10 macam perbedaan open loop dan close loop?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Sistem kontrol loop terbuka (open loop control system) Adalah sistem kontrol dimana aksi pengontrolannya (input) berdiri sendiri, tidak tergantung dari keluaran (out put) dari proses. b. Sistem kontrol loop tertutup ( close loop control system) Adalah sistem kontrol dimana aksi pengontrolannya tergantung dari keluaran</p><p></p><p><strong>Penjelasan:</strong></p><p>Semangat belajarnya</p><br />
+                                            <h2 class="ez-toc-section" id="apa-perbedaan-slow-forehand-loop-dengan-fast-forhand-loop">
+                            32. apa perbedaan slow forehand loop dengan fast forhand loop</h2><br />
+                        perbedaannya dengan cara melempar dan kecepatannya<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-loop-pada-rangkaian-listrik">
+                            33. Apa yang dimaksud dengan loop pada rangkaian listrik</h2><br />
+                        <p>Loop <strong>adalah lintasan dalam suatu rangkaian listrik tertutup dimana lintasan dimuali dari sebuah titik dan akan kembali ke titik itu lagi.</strong></p><p></p><strong>Pembahasan</strong><p><strong></strong></p><p><strong>HUKUM II KIRCHHOFF</strong></p><p><strong></strong></p><p>Bunyi hukum kedua Kirchhoff adalah, " Jumlah aljabar perubahan tegangan mengelilingi sebuah lintasan tertutup (loop) dalam suatu rangkaian listrik sama dengan nol".</p><p>Lintasan tertutup atau loop adalah lintasan dalam suatu rangkaian listrik tertutup dimana lintasan dimuali dari sebuah titik dan akan kembali ke titik itu lagi.</p><p>Aturan perjanjian tanda dalam loop:</p>Kuat arus bertanda positif jika searah dengan arah loop.Kuat arus bertanda negatif jika berlawanan arah dengan arah loop.Bila lebih dahulu menemui kutub positif sumber tegangan, nilai gaya gerak listriknya positif.Bila lebih dahulu menemui kutub negatif sumber tegangan, nilai gaya gerak listriknya negatif.<p><strong>Ditanyakan:</strong></p><p>Loop ?</p><p><strong>Penjelasan:</strong></p><p>Loop <strong>adalah lintasan dalam suatu rangkaian listrik tertutup dimana lintasan dimuali dari sebuah titik dan akan kembali ke titik itu lagi.</strong></p><p></p><p><strong></strong></p><p><strong>Pelajari lebih lanjut</strong></p><p>Hukum II Kirchhoff https://brainly.co.id/tugas/23481178</p><p>Satu Loop https://brainly.co.id/tugas/23327896</p><p>Dua Loop https://brainly.co.id/tugas/23110703</p><p>Dua Loop https://brainly.co.id/tugas/23329538</p><p></p><p><strong>Detail Jawaban</strong></p><p><strong>Kelas : </strong>XII</p><p><strong>Mapel : </strong>Fisika</p><p><strong>Bab : </strong>Listrik Arus Searah</p><p><strong>Kode : </strong>12.6.1.</p><p><strong></strong></p><p><strong>#AyoBelajar</strong></p><br />
+                                            <h2 class="ez-toc-section" id="mengapa-dibutuhkan-infinite-loop-dalam-sistem-embeddedplease-jwb-lh-tp-yg-bnr-jgn-asal-ya%e2%80%8b">
+                            34. Mengapa dibutuhkan infinite loop dalam sistem embedded?:)please jwb lh tp yg bnr jgn asal ya:)​</h2><br />
+                        <p>Kelas : V ( 5 SD )</p><p>Mapel : IPS ( Ilmu Pengetahuan Sosial )</p><p>Bab : Pengetahuan</p><p>Kode : 8.17</p><p></p><p></p><p>Namun Embeddeb system biasanya bertugas untuk </p><p>selalu aktif dan siap bekerja ketika ada input/perintah</p><p></p><p></p><p>Maaf maybe klo slh:*</p><p></p><p></p><p>#BelajarBersamaBrainlyMakinHeboh!</p><p>#BelajarBersamaBrainlyMakinCerdas</p><p></p><p>*Jdiin jwbn terbaik:"</p><p>*Like jg kli yaaa:&gt;</p><p>*Follow gmna?</p><p>*Ksih bintangnya_-</p><p></p><p></p><p>Smoga mmbantu✨&lt;:</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apakah-yang-dimaksud-dengan-local-loop%e2%80%8b">
+                            35. Apakah yang dimaksud dengan local loop?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Local Loop adalah suatu Layanan Loop sangat tepat bagi perusahaan yang ingin menghubungkan kantor pusat dengan beberapa kantor cabang yang berada di satu wilayah ataupun lintas wilayah. Layanan ini menghubungkan jaringan WAN pelanggan melalui jaringan Provider.</p><p><strong>Penjelasan:</strong></p><p>moga membantu)</p><br />
+                                            <h2 class="ez-toc-section" id="dalam-hukum-kirchoff-yang-di-maksud-loop-adalah">
+                            36. Dalam hukum kirchoff yang di maksud loop adalah</h2><br />
+                        *Lintasan yang ada di Rangkaian Listrik<br />
+                                            <h2 class="ez-toc-section" id="dengan-menggunakan-pernyataan-nested-loop-buatlah-program-berikut">
+                            37. Dengan menggunakan pernyataan nested loop , buatlah program berikut</h2><br />
+                        for(int i=0; i&lt;=1; i++)<br />{<br /> for(int j=0; j&lt;=3; j++)<br /> {<br />  i += j + 1;<br />  System.out.print(i+" ");<br />  }<br />}<br />Versi <strong>Java</strong><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-arus-loop">
+                            38. apa yang dimaksud dengan arus loop? </h2><br />
+                        maaf y gk tau,soalnya baru kls 6<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-menurut-pendapat-anda-mengapa-pada-nested-loop-for-next-perulangan-di-dalam-perulangan-looping-yang-didalam-akan-lebih-banyak-dilakukan-perulangan-dibandingkan-yang-di-luar-mohon-bantuan">
+                            39. Jelaskan menurut pendapat anda, mengapa pada nested loop FOR- NEXT (perulangan di dalam perulangan) looping yang didalam akan lebih banyak dilakukan perulangan dibandingkan yang di luar 
+mohon bantuannya </h2><br />
+                        Tentu jelas, karena percabangan nested ini nama lainnya juga percabangan bersarang yang dapat melakukan banyak aksi didalam percabangan itu.sendiri.<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-void-setup-dan-void-loop%e2%80%8b">
+                            40. apa yang dimaksud dengan void setup dan void loop​</h2><br />
+                        <p>Berikut maksud dari void setup dan void loop:</p><strong>VOID SETUP</strong> adalah keyword atau kata kunci yang berjalan hanya satu kali saja. Void setup ini berjalan satu kali di awal atau saat program dijalankan pertama kali. Void setup termasuk kode fungsi.<strong>VOID LOOP </strong>adalah keyword yang fungsinya melaksanakan ataupun mengeksekusi suatu perindah yang asalnya dari program yang berulang atau berjalan secara terus menerus (loops) selama program berjalan (board Arduino aktif).Pembahasan<p><strong>Void </strong>berkaitan dengan Arduino ide. Void sendiri dikenal sebagai keyword atau kata kunci berupa kode khusus yang dipakai dalam mendeklarasikan suatu fungsi di setiap program. Tujuan void yakni agar fungsi ataupun program yang dideklarasikan tak membuat informasi atau perintah fungsi kembali pada program asal pemanggilan. Ada dua jenis voud yang sifatnay wajib ada yakniL</p>Void setup.Void loop.<p>Setup pada jenis void pertama mengindikasikan bahwa void ini hanya kita jumpai pada awal penggunaan suatu program. Awal maksudnya di sini adalah penggunaan paling pertama. Sedangkan apabila void berulang pada sebuah program maka sebutannya adalah void loop sebab kata loop sendiri bermakna pengulangan yang berlangsung terus menerus dalam bahasa Inggris.</p>Pelajari Lebih LanjutMateri tentang Apa yang dimaksud dengan software presentasi? https://brainly.co.id/tugas/1889913Materi tentang apa yang dimaksud arsitektur perangkat lunak dan arsitektur sistem operasi? https://brainly.co.id/tugas/530988Materi tentang Periode Perkembangan sistem operasi komputer https://brainly.co.id/tugas/546249<p>• • • • • • • • • • • • • • • • • • • • • • • • • • •</p>Detail Jawaban<p><strong>Kelas      : SMA</strong></p><p><strong>Mapel    : TI</strong></p><p><strong>Bab        : -</strong></p><p><strong>Kode      : -</strong></p><p></p><p></p><p><strong>#TingkatkanPrestasimu</strong></p><p><strong>#SPJ3</strong></p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/APWy6Pc83gE?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>bahasa_lain</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dan-akibat-dari-rotasi-dan-revolusi-bumi.html">Pengertian Dan Akibat Dari Rotasi Dan Revolusi Bumi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/perangkat-komputer-yang-dapat-dilihat-dan-dipegang-disebut.html">Perangkat Komputer Yang Dapat Dilihat Dan Dipegang Disebut</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/kemungkakakn-tiga-pengertian-hukum-dari-para.html">Kemungkakakn Tiga Pengertian Hukum Dari Para</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/makna-kata-promosi-dan-garansi-pada-iklan-tersebut-adalah.html">Makna Kata Promosi Dan Garansi Pada Iklan Tersebut Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/sebutkan-hal-hal-yang-mengakibatkan-kegagalan-wirausaha.html">Sebutkan Hal Hal Yang Mengakibatkan Kegagalan Wirausaha</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dari-anggaran-dan-kelebihannya.html">Pengertian Dari Anggaran Dan Kelebihannya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/contoh-psikotes-dan-kunci-jawaban.html">Contoh Psikotes Dan Kunci Jawaban</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/sebutkan-3-persyaratan-gambar-model-prototype.html">Sebutkan 3 Persyaratan Gambar Model Prototype</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/terusan-suez-menghubungkan-dua-perairan-yaitu.html">Terusan Suez Menghubungkan Dua Perairan Yaitu</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dari-peruvian-waltz.html">Pengertian Dari Peruvian Waltz</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dari-k3lh-adalah.html">Pengertian Dari K3lh Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/tes-aritmatika-psikotes-dan-pembahasannya.html">Tes Aritmatika Psikotes Dan Pembahasannya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/soal-uts-smester-2-agama-islam-smp.html">Soal Uts Smester 2 Agama Islam Smp</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dari-kata-metafora.html">Pengertian Dari Kata Metafora</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/sebutkan-ciri-khas-lagu-daerah.html">Sebutkan Ciri Khas Lagu Daerah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/soal-sederhana-psikotes-calon-ambalan.html">Soal Sederhana Psikotes Calon Ambalan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/soal-agama-kristen-kelas-4-tentang-penciptaan.html">Soal Agama Kristen Kelas 4 Tentang Penciptaan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-dari-a-riyah.html">Pengertian Dari A riyah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/batik-klasik-adalah-sebutan-untuk-batik.html">Batik Klasik Adalah Sebutan Untuk Batik</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://idwikipedia.github.io/pengertian-hak-warga-negara-indonesia-menurut-pernyataan-dari-jimly-asshididiqie.html">Pengertian Hak Warga Negara Indonesia Menurut Pernyataan Dari Jimly Asshididiqie</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://idwikipedia.github.io"
+                            itemprop="url">BELAJAR</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://idwikipedia.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://idwikipedia.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://idwikipedia.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://idwikipedia.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/8d/be/84/8dbe84c54b7cc5b78aa0e0a1fbdbae07.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4777688,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777688&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
